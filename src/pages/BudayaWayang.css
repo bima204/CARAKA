@@ -6,7 +6,8 @@
   overflow-y: auto;
   overflow-x: hidden;
   background-image: url("/aset game/aset background/aset halaman awal.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   display: flex;

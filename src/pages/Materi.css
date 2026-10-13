@@ -2,7 +2,8 @@
   width: 100vw;
   height: 100vh;
   background-image: url("/aset game/aset background/aset halaman awal.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
   display: flex;

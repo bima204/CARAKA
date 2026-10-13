@@ -25,17 +25,7 @@ export default function Map() {
   ];
 
   return (
-    <div 
-      style={{
-        width: '100vw',
-        height: '100vh',
-        backgroundImage: 'url("/aset game/aset background/aset halaman peta atau level.jpg")',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
-        position: 'relative',
-        overflow: 'hidden'
-      }}
-    >
+    <div className="map-page-container">
       {/* Tombol Kembali */}
       <button 
         className="btn-back-home"
@@ -49,6 +39,11 @@ export default function Map() {
         </svg>
         MBALIK
       </button>
+
+      {/* Petunjuk Orientasi untuk Mobile Portrait */}
+      <div className="map-rotate-hint">
+        <span>🔄</span> Putar HP (Landscape)
+      </div>
 
       {/* Karakter Petruk sebagai pemandu (Kanan Bawah) */}
       <img 

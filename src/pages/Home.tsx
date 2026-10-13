@@ -22,20 +22,7 @@ export default function Home() {
   const particles = HOME_PARTICLES;
 
   return (
-    <div 
-      style={{
-        width: '100vw',
-        height: '100vh',
-        backgroundImage: 'url("/aset game/aset background/aset halaman awal.jpg")',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        overflow: 'hidden'
-      }}
-    >
+    <div className="home-container">
       {/* Transisi Kabut Menghilang saat baru masuk dari Opening */}
       {fromOpening && <div className="mist-fade-out" />}
       
@@ -61,14 +48,6 @@ export default function Home() {
         src="/aset game/aset karakter/abimanyu tampilan utama.png" 
         alt="Bima"
         className="home-character-left"
-        style={{
-          position: 'absolute',
-          bottom: '5vh',
-          left: '2vw',
-          height: '60vh',
-          objectFit: 'contain',
-          zIndex: 5
-        }}
       />
 
       {/* Karakter Lulu (Kanan) */}
@@ -76,42 +55,17 @@ export default function Home() {
         src="/aset game/aset karakter/lulu tampilan utama.png" 
         alt="Lu Lu"
         className="home-character-right"
-        style={{
-          position: 'absolute',
-          bottom: '5vh',
-          right: '1vw',
-          height: '60vh',
-          objectFit: 'contain',
-          zIndex: 5
-        }}
       />
 
       {/* Judul CARAKA (Tengah Atas) */}
       <img 
         src="/aset game/aset tambahan/aset judul.png" 
         alt="Judul CARAKA"
-        style={{
-          marginTop: '5vh',
-          width: '50vw',
-          maxWidth: '600px',
-          objectFit: 'contain',
-          zIndex: 10,
-          animation: 'fadeInDown 1s ease-out'
-        }}
+        className="home-title-img"
       />
 
       {/* Menu Tombol */}
-      <div 
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '15px',
-          marginTop: '2vh',
-          zIndex: 10,
-          width: '350px',
-          animation: 'fadeInUp 1s ease-out'
-        }}
-      >
+      <div className="home-menu-container">
         <button className="btn-menu btn-utama" onClick={() => navigate('/map')}>
           <div className="btn-title">MULAI DOLAN</div>
           <div className="btn-subtitle">Mlebu ing Peta Petualangan</div>
@@ -126,7 +80,7 @@ export default function Home() {
           <div className="btn-title">Tentang Aplikasi</div>
         </button>
         <button className="btn-menu btn-kecil" onClick={() => navigate('/pengaturan')}>
-          <div className="btn-title" style={{ fontSize: '1.2rem' }}>Pengaturan</div>
+          <div className="btn-title">Pengaturan</div>
         </button>
       </div>
     </div>

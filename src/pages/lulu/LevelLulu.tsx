@@ -333,7 +333,7 @@ export default function LevelLulu() {
                 style={isShaking ? { border: '2px solid #ef4444', background: 'rgba(239, 68, 68, 0.5)' } : {}}
               >
                 <span className="choice-letter">{letters[index]}</span>
-                <span style={{ fontSize: '24px', letterSpacing: '1px' }}>{choice.text}</span>
+                <span>{choice.text}</span>
               </button>
             );
           })}
@@ -352,7 +352,7 @@ export default function LevelLulu() {
             <span className="speaker-name">{currentDialog.speaker}</span>
           </div>
           
-          <div className="dialog-text" style={{ fontSize: '26px' }}>{currentDialog.text}</div>
+          <div className="dialog-text">{currentDialog.text}</div>
           
           {currentDialog.type === 'statement' && (
             <div className="click-to-continue" onClick={handleNextDialog} title="Klik utawa tekan Enter ing keyboard">

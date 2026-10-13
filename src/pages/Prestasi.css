@@ -115,3 +115,50 @@
 .medal-card.unlocked .medal-desc {
   color: #5d4037;
 }
+
+/* Responsive Mobile Screen */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .stat-box {
+    padding: 18px 30px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 1.1rem;
+  }
+
+  .medals-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .medal-card {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .medal-icon {
+    font-size: 3.5rem;
+    margin-bottom: 12px;
+  }
+
+  .medal-name {
+    font-size: 1.25rem;
+  }
+
+  .medal-desc {
+    font-size: 0.95rem;
+  }
+}
+

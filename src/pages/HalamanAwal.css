@@ -115,3 +115,31 @@
   from { transform: translateX(50vw); opacity: 0; }
   to { transform: translateX(-25vw); opacity: 1; }
 }
+
+/* Responsive Mobile Screen */
+@media (max-width: 768px) {
+  .splash-logo {
+    width: 82vw;
+    max-width: 380px;
+    margin-bottom: 25px;
+  }
+
+  .labuh-img {
+    width: min(220px, 60vw);
+  }
+}
+
+/* Landscape Mobile (layar tipis vertikal saat HP dimiringkan) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .splash-logo {
+    width: auto;
+    max-height: 38vh;
+    max-width: 55vw;
+    margin-bottom: 10px;
+  }
+
+  .labuh-img {
+    width: 170px;
+  }
+}
+

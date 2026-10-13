@@ -381,3 +381,182 @@
 .bahasa-box.krama {
   border-color: #90caf9;
 }
+
+/* =========================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================= */
+
+@media (max-width: 768px) {
+  .materi-page-container {
+    background-size: cover;
+  }
+
+  .petruk-container {
+    height: 36vh;
+    left: auto;
+    right: -4vw;
+    bottom: 0;
+    opacity: 0.88;
+    pointer-events: none;
+    z-index: 4;
+  }
+
+  .petruk-speech-bubble {
+    bottom: auto;
+    top: calc(65px + env(safe-area-inset-top, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 360px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border-width: 3px;
+    z-index: 12;
+  }
+
+  .petruk-speech-bubble::after,
+  .petruk-speech-bubble::before {
+    display: none;
+  }
+
+  .materi-menu-container {
+    margin-left: 0;
+    width: 90vw;
+    max-width: 330px;
+    margin-top: 130px;
+    gap: 12px;
+  }
+
+  .materi-title-text {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  .materi-menu-container .btn-title {
+    font-size: 1.15rem !important;
+  }
+
+  .materi-menu-container .btn-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  /* Modals */
+  .materi-content-modal {
+    width: 94vw;
+    height: 88vh;
+    border-width: 5px;
+    border-radius: 20px;
+  }
+
+  .modal-close-btn {
+    top: -14px;
+    right: -10px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    border-width: 3px;
+  }
+
+  .modal-header {
+    padding: 16px;
+    border-bottom-width: 4px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .modal-body {
+    padding: 18px 14px;
+  }
+
+  .aksara-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+  }
+
+  .aksara-card {
+    padding: 16px 10px;
+  }
+
+  .aksara-char {
+    font-size: 2.6rem;
+  }
+
+  .aksara-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Landscape Mobile (layar tipis vertikal saat HP ditidurkan) */
+@media (max-height: 520px) and (orientation: landscape) {
+  .petruk-container {
+    height: 72vh;
+    left: 2vw;
+    bottom: 0;
+  }
+
+  .petruk-speech-bubble {
+    bottom: 48vh;
+    left: 24vw;
+    max-width: 260px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    border-width: 3px;
+  }
+
+  .petruk-speech-bubble::after {
+    bottom: -15px;
+    left: 20px;
+    border-width: 15px 15px 0 0;
+  }
+
+  .petruk-speech-bubble::before {
+    bottom: -9px;
+    left: 23px;
+    border-width: 11px 11px 0 0;
+  }
+
+  .materi-menu-container {
+    margin-left: 30vw;
+    width: min(440px, 62vw);
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  .materi-title-text {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .materi-menu-container .btn-menu {
+    padding: 8px 14px;
+  }
+
+  .materi-menu-container .btn-title {
+    font-size: 1rem !important;
+  }
+
+  .materi-menu-container .btn-subtitle {
+    font-size: 0.72rem !important;
+  }
+
+  .materi-content-modal {
+    width: 92vw;
+    height: 88vh;
+    border-width: 5px;
+  }
+
+  .modal-header {
+    padding: 12px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal-body {
+    padding: 14px;
+  }
+}

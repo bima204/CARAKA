@@ -1,0 +1,115 @@
+/* Home.css */
+
+/* Animasi Napas/Goyang Karakter */
+@keyframes swayLeft {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-8px) rotate(-1.5deg) scale(1.02); }
+}
+
+@keyframes swayRight {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-10px) rotate(1.5deg) scale(1.02); }
+}
+
+.home-character-left {
+  animation: slideInLeftHome 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+             swayLeft 4s ease-in-out infinite 0.8s;
+  transform-origin: bottom center;
+}
+
+.home-character-right {
+  animation: slideInRightHome 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+             swayRight 4.5s ease-in-out infinite 0.8s;
+  transform-origin: bottom center;
+}
+
+@keyframes slideInLeftHome {
+  from { transform: translateX(-30vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRightHome {
+  from { transform: translateX(30vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Efek Partikel Angin / Kunang-kunang / Debu Ajaib */
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2; /* Di belakang tombol dan judul, tapi di depan background */
+  overflow: hidden;
+}
+
+.wind-particle {
+  position: absolute;
+  background-color: #ffd54f;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 213, 79, 0.8);
+  opacity: 0;
+  animation: flyWind linear infinite;
+}
+
+/* Partikel daun (hijau) */
+.wind-leaf {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background-color: #4caf50;
+  border-radius: 10px 0;
+  opacity: 0;
+  animation: flyWindLeaf linear infinite;
+}
+
+@keyframes flyWind {
+  0% {
+    transform: translate(110vw, 0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-10vw, 100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes flyWindLeaf {
+  0% {
+    transform: translate(110vw, -10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-10vw, 80vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Transisi Kabut dari Halaman Awal */
+.mist-fade-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 100;
+  pointer-events: none;
+  animation: fogOut 2s ease-out forwards;
+}
+
+@keyframes fogOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

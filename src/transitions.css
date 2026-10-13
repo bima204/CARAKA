@@ -1,0 +1,21 @@
+/* Animasi Masuk Halus Tanpa Blank Layar */
+@keyframes contentSmoothEnter {
+  0% {
+    transform: scale(0.988);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.page-fade-in {
+  animation: contentSmoothEnter 0.18s ease-out forwards;
+}
+
+.page-transition-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+

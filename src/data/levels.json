@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "character": "abimanyu",
+    "name": "Omah Bima",
+    "description": "Sinau pamit marang wong tuwa sadurunge lunga.",
+    "isUnlocked": true,
+    "score": 0,
+    "maxScore": 10
+  },
+  {
+    "id": 2,
+    "character": "abimanyu",
+    "name": "Desa Ngandap Asor",
+    "description": "Sinau unggah-ungguh basa ketemu wong sing luwih tuwa.",
+    "isUnlocked": true,
+    "score": 0,
+    "maxScore": 10
+  },
+  {
+    "id": 3,
+    "character": "abimanyu",
+    "name": "Desa Ragajimbangan",
+    "description": "Sinau tata krama srawung ing tengahing desa.",
+    "isUnlocked": true,
+    "score": 0,
+    "maxScore": 10
+  },
+  {
+    "id": 4,
+    "character": "lulu",
+    "name": "Candi Cilik",
+    "description": "Miwiti sinau ngenal aksara Jawa dhasar.",
+    "isUnlocked": true,
+    "score": 0,
+    "maxScore": 20
+  },
+  {
+    "id": 5,
+    "character": "lulu",
+    "name": "Candi Prambanan",
+    "description": "Sinau paugeran lan wujude Pasangan Aksara Jawa.",
+    "isUnlocked": true,
+    "score": 0,
+    "maxScore": 10
+  },
+  {
+    "id": 6,
+    "character": "lulu",
+    "name": "Candi Borobudur",
+    "description": "Ujian maca ukara aksara Jawa kanthi lancar.",
+    "isUnlocked": true,
+    "score": 0,
+    "maxScore": 10
+  }
+]

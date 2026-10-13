@@ -1,0 +1,972 @@
+{
+  "1": {
+    "title": "LEVEL 1: PAMITAN & SUNGKEM",
+    "background": "/aset game/aset background/bima level 1.jpg",
+    "dialogs": [
+      {
+        "id": 1,
+        "speaker": "Bima",
+        "text": "Wonten nopo Simbok, ngapunten Bima saking wingking?",
+        "type": "statement",
+        "nextDialog": 2
+      },
+      {
+        "id": 2,
+        "speaker": "Simbok",
+        "text": "Iya le, rapopo. Kie Simbok arep nyuwun tulung karo cah bagus.",
+        "type": "statement",
+        "nextDialog": 3
+      },
+      {
+        "id": 3,
+        "speaker": "Bima",
+        "text": "Nggih, pripun Simbok?",
+        "type": "statement",
+        "nextDialog": 4
+      },
+      {
+        "id": 4,
+        "speaker": "Simbok",
+        "text": "Kowe iso nganterke layang iki marang Buyut nang desa Ragajimbangan le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Inggih Mbok, kula saget lan kersa ngladosi.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! Basane alus lan ngajeni wong tuwa.",
+            "nextDialog": 5
+          },
+          {
+            "text": "Iya Mbok, aku gelem wae nganterke.",
+            "isCorrect": false,
+            "feedback": "Kurang trep! Marang Simbok kudu nganggo basa Krama, dudu Ngoko."
+          },
+          {
+            "text": "Mengko dhisik Mbok, aku isih kesel.",
+            "isCorrect": false,
+            "feedback": "Ora sopan nolak utawa semaya marang dhawuhe wong tuwa."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "speaker": "Bima",
+        "text": "Inggih Mbok, kula saget lan kersa ngladosi. Kapan anggen kula mangkat?",
+        "type": "statement",
+        "nextDialog": 6
+      },
+      {
+        "id": 6,
+        "speaker": "Simbok",
+        "text": "Yen wis rampung sarapan, mangkata saiki le. Nanging layange kudu dijaga temenan ya!",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Sendika dhawuh Mbok, layang menika badhe kula jagi saestu.",
+            "isCorrect": true,
+            "feedback": "Pinter! 'Sendika dhawuh' iku tegese manut lan siap nglakoni perintah kanthi ikhlas.",
+            "nextDialog": 7
+          },
+          {
+            "text": "Tenang wae Mbok, mesthi tak lebokke kantong.",
+            "isCorrect": false,
+            "feedback": "Kurang alus marang wong tuwa, becike nganggo Krama."
+          },
+          {
+            "text": "Gampang kuwi Mbok, ora usah kuwatir.",
+            "isCorrect": false,
+            "feedback": "Ukarane kurang trapsila."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "speaker": "Bima",
+        "text": "Sendika dhawuh Mbok, layang menika badhe kula jagi saestu.",
+        "type": "statement",
+        "nextDialog": 8
+      },
+      {
+        "id": 8,
+        "speaker": "Simbok",
+        "text": "Oiya le, mengko yen liwat ngarepe Pak RT utawa sesepuh ing dalan desa, kowe kudu kepriye?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Mung mlaku rikat karo meneng wae.",
+            "isCorrect": false,
+            "feedback": "Ora sopan! Yen liwat ngarepe wong tuwa kudu uluk salam lan mbungkukake awak."
+          },
+          {
+            "text": "Uluk salam, mbungkukake awak, matur 'nderek langkung'.",
+            "isCorrect": true,
+            "feedback": "Jempolan! 'Nderek langkung' iku subasita nalika ngliwati ngarepe wong sepuh.",
+            "nextDialog": 9
+          },
+          {
+            "text": "Nyapa nganggo ngomong 'Halo Pak RT!' karo mlayu.",
+            "isCorrect": false,
+            "feedback": "Kurang trapsila miturut unggah-ungguh Jawa."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "speaker": "Bima",
+        "text": "Kula badhe matur 'nderek langkung' sinambi nyuwun pamit kanthi trapsila, Mbok.",
+        "type": "statement",
+        "nextDialog": 10
+      },
+      {
+        "id": 10,
+        "speaker": "Simbok",
+        "text": "Bocah pinter. Lha yen Buyut takon kabar babagan kasarasane Simbok lan Bapak, kowe mangsuli piye le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Simbok karo Bapak waras slamet kabeh Mbah.",
+            "isCorrect": false,
+            "feedback": "'Waras' iku ngoko, kanggo wong tuwa migunakake tembung 'ginanjar wilujeng/sehat'."
+          },
+          {
+            "text": "Simbok kaliyan Bapak sami ginanjar wilujeng lan sehat.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! 'Ginanjar wilujeng' mratelakake kahanan sehat kanthi basa Krama Alus.",
+            "nextDialog": 11
+          },
+          {
+            "text": "Bapak lan Simbok apik-apik wae kok Mbah.",
+            "isCorrect": false,
+            "feedback": "Ukara iki isih ngoko, durung trep marang Buyut."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "speaker": "Bima",
+        "text": "Kula aturi pirsa bilih Bapak kaliyan Simbok sami ginanjar wilujeng lan rahayu.",
+        "type": "statement",
+        "nextDialog": 12
+      },
+      {
+        "id": 12,
+        "speaker": "Simbok",
+        "text": "Terus le, menawa Buyut maringi wedang utawa panganan, carane nampa kepriye?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Nampa nganggo tangan tengen kanthi matur 'matur nuwun sanget'.",
+            "isCorrect": true,
+            "feedback": "Bagus! Nampa apa wae saka wong liya kudu nganggo asta tengen (tangan kanan).",
+            "nextDialog": 13
+          },
+          {
+            "text": "Langsung njupuk nganggo tangan kiwa amarga tangan tengen nyekel tas.",
+            "isCorrect": false,
+            "feedback": "Ora pareng! Tangan kiwa ora sopan kanggo nampa paringan."
+          },
+          {
+            "text": "Ditampik langsung amarga isin.",
+            "isCorrect": false,
+            "feedback": "Nampik langsung bisa gawe cuwaning ati (menyinggung perasaan) sing maringi."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "speaker": "Bima",
+        "text": "Kula tampi nganggo asta tengen lan ngaturaken agunging panuwun, Mbok.",
+        "type": "statement",
+        "nextDialog": 14
+      },
+      {
+        "id": 14,
+        "speaker": "Simbok",
+        "text": "Yen Buyut mundhut pirsa apa kowe wis mangan apa durung, mangsulimu kepriye le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Aku wis mangan wareg mau esuk Mbah.",
+            "isCorrect": false,
+            "feedback": "'Mangan' iku ngoko. Kanggo awake dhewe ing ngarepe wong tuwa gunakake 'nedha'."
+          },
+          {
+            "text": "Kula sampun nedha kalawau enjang, Buyut.",
+            "isCorrect": true,
+            "feedback": "Tepat! Kanggo awake dhewe nganggo 'nedha', dene kanggo wong sepuh 'dhahar'.",
+            "nextDialog": 15
+          },
+          {
+            "text": "Kula sampun dhahar wareg sanget Buyut.",
+            "isCorrect": false,
+            "feedback": "'Dhahar' iku krama inggil, ora kena dienggo nyebut awake dhewe!"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "speaker": "Bima",
+        "text": "Kula badhe matur 'kula sampun nedha', mboten badhe nyebut dhahar kagem awak kula piyambak.",
+        "type": "statement",
+        "nextDialog": 16
+      },
+      {
+        "id": 16,
+        "speaker": "Simbok",
+        "text": "Wah jempolan tenan pangertimu! Sakwise rampung kabeh urusan lan arep pamit bali, kepriye caramu nyuwun pamit?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Buyut, kula nyuwun pamit badhe wangsul rumiyin.",
+            "isCorrect": true,
+            "feedback": "Bener banget! Pamitan kanthi santun lan nyuwun donga pangestu.",
+            "nextDialog": 17
+          },
+          {
+            "text": "Mbah, aku arep mulih saiki ya, wis awan.",
+            "isCorrect": false,
+            "feedback": "Iki ngoko lugu, kurang trep dienggo pamitan marang Buyut."
+          },
+          {
+            "text": "Langsung budhal mulih tanpa kanda-kanda.",
+            "isCorrect": false,
+            "feedback": "Ora sopan babar pisan yen lunga tanpa pamitan."
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "speaker": "Bima",
+        "text": "Kula badhe nyuwun pamit wangsul sinambi nyuwun donga pangestunipun Buyut.",
+        "type": "statement",
+        "nextDialog": 18
+      },
+      {
+        "id": 18,
+        "speaker": "Simbok",
+        "text": "Nah, menawa ing dalan kowe kepethuk kancamu sakelas, apa kowe kudu tetep nganggo basa Krama?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Maring kanca sabarakan kena nganggo basa Ngoko sing akrab.",
+            "isCorrect": true,
+            "feedback": "Pinter! Karo kanca sebaya utawa sabarakan kena nggunakake basa Ngoko.",
+            "nextDialog": 19
+          },
+          {
+            "text": "Kudu tetep Krama Alus banget.",
+            "isCorrect": false,
+            "feedback": "Krama Alus marang kanca sabarakan malah krasa kaku/ora lumrah."
+          },
+          {
+            "text": "Ora usah diajak guneman babar pisan.",
+            "isCorrect": false,
+            "feedback": "Kudu tetep srawung lan grapyak marang kanca."
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "speaker": "Bima",
+        "text": "Inggih Mbok, menawi marang rencang saumuran saged ngginakaken basa Ngoko ingkang sae.",
+        "type": "statement",
+        "nextDialog": 20
+      },
+      {
+        "id": 20,
+        "speaker": "Simbok",
+        "text": "Sadurunge mangkat saiki, kepriye tata carane Bima pamitan marang Simbok?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Mlaku metu karo ngomong 'Mangkat disik Mbok!'.",
+            "isCorrect": false,
+            "feedback": "Kurang trapsila marang wong tuwa."
+          },
+          {
+            "text": "Salim sungkem ngambung asta, nyuwun donga pangestu.",
+            "isCorrect": true,
+            "feedback": "Luar biasa! Sungkem lan nyuwun pangestu iku budi pekerti luhur Jawa.",
+            "nextDialog": 21
+          },
+          {
+            "text": "Mung ngathungake tangan njaluk sangu.",
+            "isCorrect": false,
+            "feedback": "Ora sopan yen mung mikirke sangu tanpa pamitan sing bener."
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "speaker": "Bima",
+        "text": "Kula nyuwun donga pangestu nggih Mbok, mugi-mugi lampah kula tansah pinaringan rahayu wilujeng.",
+        "type": "statement",
+        "nextDialog": 22
+      },
+      {
+        "id": 22,
+        "speaker": "Simbok",
+        "text": "Iya le, tak pangestoni. Terakhir, apa tegese sesanti 'Ajining dhiri gumantung ana ing lathi' iku le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Aji-ajine manungsa gumantung saka panganan sing dipangan.",
+            "isCorrect": false,
+            "feedback": "Salah, 'lathi' iku lambe/tutur tembung, dudu panganan."
+          },
+          {
+            "text": "Ajining dhiri (kehormatan) gumantung saka carane guneman lan tutur basane.",
+            "isCorrect": true,
+            "feedback": "Hebat! Guneman sing santun ndadekake awake dhewe diajeni dening liyan.",
+            "nextDialog": 23
+          },
+          {
+            "text": "Ajine awak gumantung saka klambi sing dienggo.",
+            "isCorrect": false,
+            "feedback": "Klambi iku 'ajining raga gumantung ana ing busana'."
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "speaker": "Bima",
+        "text": "Matur nuwun sanget piwulangipun Simbok. Bima badhe tansah ngugemi tata krama lan unggah-ungguh.",
+        "type": "statement",
+        "nextDialog": 24
+      },
+      {
+        "id": 24,
+        "speaker": "Simbok",
+        "text": "Alhamdulillah, bocah bagus pinter tenan. Budhala saiki le, ati-ati ana ing dalan ya!",
+        "type": "statement",
+        "nextDialog": null
+      }
+    ]
+  },
+  "2": {
+    "title": "LEVEL 2: TAKON MARANG PAKDHE",
+    "background": "/aset game/aset background/bima level 2.jpg",
+    "dialogs": [
+      {
+        "id": 1,
+        "speaker": "Bima",
+        "text": "Nuwun sewu Pakdhe, ngapunten kepareng kula ngganggu wedalipun sekedhap?",
+        "type": "statement",
+        "nextDialog": 2
+      },
+      {
+        "id": 2,
+        "speaker": "Pakdhe",
+        "text": "Ooo le Bima! Ora apa-apa cah bagus, ana apa kok sajake wigati temen?",
+        "type": "statement",
+        "nextDialog": 3
+      },
+      {
+        "id": 3,
+        "speaker": "Bima",
+        "text": "Pakdhe, menawi badhe tindak dhateng dhusun Ngandap Asor, margi ingkang leres menika liwat pundi nggih?",
+        "type": "statement",
+        "nextDialog": 4
+      },
+      {
+        "id": 4,
+        "speaker": "Pakdhe",
+        "text": "Lha kowe arep menyang Ngandap Asor ana perlu apa le? Kok numpak pit dhewekan?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Kula dipun-utus Simbok ngaturi serat kagem Buyut, Pakdhe.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! 'Dipun-utus' lan 'ngaturi serat' minangka basa Krama Alus ingkang trapsila.",
+            "nextDialog": 5
+          },
+          {
+            "text": "Aku dikongkon Simbok ngeterke layang marang Buyut.",
+            "isCorrect": false,
+            "feedback": "Kurang sopan! 'Dikongkon' iku basa Ngoko, marang wong tuwa becike 'dipun-utus'."
+          },
+          {
+            "text": "Mung arep dolan wae kok Pakdhe.",
+            "isCorrect": false,
+            "feedback": "Basa Ngoko lan ora jujur marang dhawuhe wong tuwa."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "speaker": "Bima",
+        "text": "Kula dipun-utus Simbok ngaturi serat kagem Buyut, Pakdhe.",
+        "type": "statement",
+        "nextDialog": 6
+      },
+      {
+        "id": 6,
+        "speaker": "Pakdhe",
+        "text": "Oalah, bocah bekti temenan kowe le. Dalan menyang Ngandap Asor iku mengko ana prapatan gedhe. Yen wis tekan prapatan, caramu takon marang wong ing dalan kepriye?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Nyapa nganggo 'Nuwun sewu / ndherek mangsuli pitakenan' kanthi ngandhap asor.",
+            "isCorrect": true,
+            "feedback": "Bagus! 'Nuwun sewu' iku tembung subasita nalika arep nyuwun pirsa utawa nyela wong liya.",
+            "nextDialog": 7
+          },
+          {
+            "text": "Langsung mbengok 'He dalan Ngandap Asor endi?!'",
+            "isCorrect": false,
+            "feedback": "Ora sopan babar pisan, malah agawe gela atine wong sing dirungokake."
+          },
+          {
+            "text": "Mung ngathungake tangan karo nduding dalan.",
+            "isCorrect": false,
+            "feedback": "Kurang trapsila yen takon tanpa uluk salam lan tembung santun."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "speaker": "Bima",
+        "text": "Kula badhe matur 'Nuwun sewu' kanthi trapsila lan ngandhap asor, Pakdhe.",
+        "type": "statement",
+        "nextDialog": 8
+      },
+      {
+        "id": 8,
+        "speaker": "Pakdhe",
+        "text": "Pinter. Terus yen takon arah dalan marang wong sing luwih sepuh ing kono, ukaramu kepriye le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Nyuwun sewu, kepareng nyuwun pirsa, margi dhateng Ngandap Asor menika menga pundi?",
+            "isCorrect": true,
+            "feedback": "Jempolan! 'Kepareng nyuwun pirsa' iku ukara Krama Inggil sing sampurna kanggo takon marang sesepuh.",
+            "nextDialog": 9
+          },
+          {
+            "text": "Pak, aku arep takon dalan Ngandap Asor nengen apa ngiwa?",
+            "isCorrect": false,
+            "feedback": "Iki ngoko lugu, ora pantes dienggo takon marang wong sing luwih tuwa ing dalan."
+          },
+          {
+            "text": "Kowe ngerti dalan menyang Ngandap Asor ora?",
+            "isCorrect": false,
+            "feedback": "Kasar banget, nyebut wong tuwa nganggo tembung 'kowe' ora pareng."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "speaker": "Bima",
+        "text": "Kula badhe matur: 'Kepareng nyuwun pirsa, margi ingkang leres menika mandhap pundi?'.",
+        "type": "statement",
+        "nextDialog": 10
+      },
+      {
+        "id": 10,
+        "speaker": "Pakdhe",
+        "text": "Bocah pinter! Nah, saka prapatan kuwi, kowe mengo nengen (belok kanan). Ing basa Krama Alus, 'belok kanan' iku kepriye le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Menga tengen / belok tengen",
+            "isCorrect": true,
+            "feedback": "Leres sanget! 'Tengen' iku kanan, dene 'kiwa' iku kiri.",
+            "nextDialog": 11
+          },
+          {
+            "text": "Menga kiwa",
+            "isCorrect": false,
+            "feedback": "Salah, kiwa iku kiri, yen mengo kiwa kowe kesasar!"
+          },
+          {
+            "text": "Maju terus",
+            "isCorrect": false,
+            "feedback": "Maju lurus iku lempeng kemawon."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "speaker": "Bima",
+        "text": "Inggih Pakdhe, saking prapatan kula badhe menga tengen.",
+        "type": "statement",
+        "nextDialog": 12
+      },
+      {
+        "id": 12,
+        "speaker": "Pakdhe",
+        "text": "Ing dalan Ngandap Asor mengko kowe bakal liwat ngarep omah joglo sesepuh desa. Nalika liwat, apa sing kudu Bima lakoni?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Mudhun saka pit (sepeda), mbungkuk, lan matur 'Nderek langkung'.",
+            "isCorrect": true,
+            "feedback": "Luar biasa! Tata krama Jawa mulangake supaya mudhun saka tumpakan minangka pakurmatan marang sesepuh.",
+            "nextDialog": 13
+          },
+          {
+            "text": "Ngebel pit banter-banter karo mlayu cepet.",
+            "isCorrect": false,
+            "feedback": "Ora sopan lan ngganggu katentreman warga desa."
+          },
+          {
+            "text": "Tetep numpak pit karo nyanyi banter.",
+            "isCorrect": false,
+            "feedback": "Ora nduweni unggah-ungguh lan ora ngajeni papan sakiwa tengene."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "speaker": "Bima",
+        "text": "Kula badhe mandhap saking pit lan matur 'nderek langkung' kanthi trapsila, Pakdhe.",
+        "type": "statement",
+        "nextDialog": 14
+      },
+      {
+        "id": 14,
+        "speaker": "Pakdhe",
+        "text": "Elok tenan budi pekertimu le! Lha yen Pakdhe maringi pitutur lan pituduh dalan iki, caramu ngaturake panuwun kepriye?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Matur nuwun sanget Pakdhe, awit sedaya pituduh lan palilahipun.",
+            "isCorrect": true,
+            "feedback": "Pinter! 'Matur nuwun sanget' kanthi ngajeni iku pakurmatan marang wong tuwa sing wis paring pitulungan.",
+            "nextDialog": 15
+          },
+          {
+            "text": "Iya Pakdhe, suwun ya wis dikandhani.",
+            "isCorrect": false,
+            "feedback": "Kurang alus, tembung 'suwun' lan 'ya' iku ngoko lugu."
+          },
+          {
+            "text": "Oke Pakdhe, tak mangkat saiki.",
+            "isCorrect": false,
+            "feedback": "Kurang ngugemi unggah-ungguh Jawa marang pakdhe."
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "speaker": "Bima",
+        "text": "Matur nuwun sanget Pakdhe, awit sedaya pituduh lan palilahipun.",
+        "type": "statement",
+        "nextDialog": 16
+      },
+      {
+        "id": 16,
+        "speaker": "Pakdhe",
+        "text": "Padha-padha le Bima. Oiya, apa tegese jeneng desa 'Ngandap Asor' iku miturut pangertimu?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Sikap andhap asor, lembah manah, lan ora gumede (rendah hati).",
+            "isCorrect": true,
+            "feedback": "Bener banget! 'Ngandap asor' iku sipat luhur ora sombong lan tansah ngajeni wong liya.",
+            "nextDialog": 17
+          },
+          {
+            "text": "Papan sing manggone ana ing jurang sing jero.",
+            "isCorrect": false,
+            "feedback": "Salah, iki dudu teges geografis nanging teges budi pekerti."
+          },
+          {
+            "text": "Wong sing tansah kalah ing sabarang gawe.",
+            "isCorrect": false,
+            "feedback": "Kirang trep, andhap asor tegese rendah hati, dudu kalah."
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "speaker": "Bima",
+        "text": "Pancen leres Pakdhe, piwulang luhur Jawa tansah ngutamakaken sikap andhap asor lan lembah manah.",
+        "type": "statement",
+        "nextDialog": 18
+      },
+      {
+        "id": 18,
+        "speaker": "Pakdhe",
+        "text": "Nah, menawa kowe ketemu warga sing lagi nyambut gawe ing pinggir dalan, piye caramu aruh-aruh (menyapa)?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Matur kanthi grapyak: 'Sugeng enjang Pak, saweg nandur nggih?'.",
+            "isCorrect": true,
+            "feedback": "Jempolan! Wong Jawa kudu grapyak sumeh marang tangga teparo lan srawung kanthi becik.",
+            "nextDialog": 19
+          },
+          {
+            "text": "Mung nglirik sinambi mlethekake rai cemberut.",
+            "isCorrect": false,
+            "feedback": "Ora becik, wong Jawa iku kudu sumeh lan grapyak."
+          },
+          {
+            "text": "Mbengok saka kadohan karo ngguyu kemekelen.",
+            "isCorrect": false,
+            "feedback": "Ora sopan lan ngganggu wong sing lagi kerja."
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "speaker": "Bima",
+        "text": "Kula badhe aruh-aruh kanthi sumeh lan grapyak marang sinten kemawon ingkang kapanggih, Pakdhe.",
+        "type": "statement",
+        "nextDialog": 20
+      },
+      {
+        "id": 20,
+        "speaker": "Pakdhe",
+        "text": "Wah, kowe pancen pantes dadi tuladha cah bagus! Sadurunge nerusake laku, kepriye caramu nyuwun pamit marang Pakdhe saiki?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Pakdhe, kepareng kula nyuwun pamit badhe nglajengaken lampah dhateng Ngandap Asor.",
+            "isCorrect": true,
+            "feedback": "Luar biasa! 'Nyuwun pamit badhe nglajengaken lampah' iku basa Krama Alus sing pas lan mantep.",
+            "nextDialog": 21
+          },
+          {
+            "text": "Pakdhe aku tak mangkat disik ya, selak awan ki.",
+            "isCorrect": false,
+            "feedback": "Iki basa Ngoko, durung trep dienggo pamitan marang Pakdhe."
+          },
+          {
+            "text": "Langsung nyengklak pit tanpa kanda apa-apa.",
+            "isCorrect": false,
+            "feedback": "Ora sopan babar pisan yen lunga tanpa pamitan."
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "speaker": "Bima",
+        "text": "Pakdhe, kepareng kula nyuwun pamit badhe nglajengaken lampah dhateng dhusun Ngandap Asor.",
+        "type": "statement",
+        "nextDialog": 22
+      },
+      {
+        "id": 22,
+        "speaker": "Pakdhe",
+        "text": "Iya le Bima, tak lilani lan tak dongaake slamet tekan papan tujuan. Budhala saiki, sing ati-ati ana ing dalan ya cah bagus!",
+        "type": "statement",
+        "nextDialog": null
+      }
+    ]
+  },
+  "3": {
+    "title": "LEVEL 3: SOWAN MARANG BUYUT",
+    "background": "/aset game/aset background/bima level 3.jpg",
+    "dialogs": [
+      {
+        "id": 1,
+        "speaker": "Bima",
+        "text": "(Ing batin: Waduh, iki omahe Buyut... Jarene kanca-kanca Buyut kondhang galak lan disiplin banget. Bima kudu ekstra ngati-ati anggone matur).",
+        "type": "statement",
+        "nextDialog": 2
+      },
+      {
+        "id": 2,
+        "speaker": "Bima",
+        "text": "Kula nuwun... Sugeng siyang Buyut, kepareng kula sowan.",
+        "type": "statement",
+        "nextDialog": 3
+      },
+      {
+        "id": 3,
+        "speaker": "Buyut",
+        "text": "Sapa kuwi sing ana ngarep lawang?! Mlebu kene! Kowe anake sapa lan ana perlu apa wani-wani teka mrene?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Nyuwun pangapunten Buyut, nepangaken kula Bima wayahipun Simbok, sowan badhe ngaturaken serat.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! 'Nepangaken' lan nyebut 'wayahipun' (cucu/cicit) kanthi Krama Inggil ingkang ngurmati sepuh.",
+            "nextDialog": 4
+          },
+          {
+            "text": "Aku Bima Mbah, putune Simbok arep ngeterke layang.",
+            "isCorrect": false,
+            "feedback": "Kurang ajar! Marang Buyut ora kena nganggo tembung 'aku' utawa basa Ngoko."
+          },
+          {
+            "text": "Aja galak-galak ta Buyut, iki aku Bima.",
+            "isCorrect": false,
+            "feedback": "Ora sopan babar pisan ngarani wong tuwa galak ing ngarepe."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "speaker": "Bima",
+        "text": "Nyuwun pangapunten Buyut, nepangaken kula Bima wayahipun Simbok, sowan mriki badhe ngaturaken serat.",
+        "type": "statement",
+        "nextDialog": 5
+      },
+      {
+        "id": 5,
+        "speaker": "Buyut",
+        "text": "Ooo... Kowe putuku sing arane Bima? Ya wis, lungguha ning klasa kono! Aja jegang utawa slonjoran!",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Lungguh sila kanthi trapsila lan tangan tumemplek ing pupu.",
+            "isCorrect": true,
+            "feedback": "Jempolan! Lungguh sila tumrap priya lan simpuh tumrap wanita iku tata krama lungguh Jawa.",
+            "nextDialog": 6
+          },
+          {
+            "text": "Lungguh karo ngangkat sikil siji ing dhuwur kursi.",
+            "isCorrect": false,
+            "feedback": "Ora sopan! Lungguh jegang ing ngarepe sesepuh iku lancang banget."
+          },
+          {
+            "text": "Slonjoran sikil lurus ngarah marang Buyut.",
+            "isCorrect": false,
+            "feedback": "Ngarahake dampal sikil marang wong tuwa iku ora duwe subasita."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "speaker": "Bima",
+        "text": "Matur nuwun Buyut, kula badhe lenggah sila kanthi trapsila.",
+        "type": "statement",
+        "nextDialog": 7
+      },
+      {
+        "id": 7,
+        "speaker": "Buyut",
+        "text": "Endi layange? Majua kene, kepriye caramu masrahake layang kuwi marang aku?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Maju kanthi laku dhodhok, ngaturaken layang mawi asta kekalih sinambi mbungkuk.",
+            "isCorrect": true,
+            "feedback": "Luar biasa! Masrahake layang nganggo asta kekalih lan laku dhodhok iku tandha bekti luhur marang Buyut.",
+            "nextDialog": 8
+          },
+          {
+            "text": "Muncalake layang ing ngarepe meja Buyut.",
+            "isCorrect": false,
+            "feedback": "Kurang ajar! Muncalke barang marang sesepuh bisa gawe duka."
+          },
+          {
+            "text": "Ngulungake nganggo tangan kiwa karo ngadeg.",
+            "isCorrect": false,
+            "feedback": "Ora sopan nggunakake tangan kiwa marang sapa wae."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "speaker": "Bima",
+        "text": "Kula aturaken serat saking Simbok menika Buyut, mugi kepareng kersa nampi.",
+        "type": "statement",
+        "nextDialog": 9
+      },
+      {
+        "id": 9,
+        "speaker": "Buyut",
+        "text": "Hemm... (Buyut maos layang). Layange Simbok wis tak waca. Nanging Simbokmu kandha yen kowe kudu tak tes unggah-ungguhmu dhisik! Apa kowe gelem?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Sendika dhawuh Buyut, kula cumadhang tampi sedaya pacoban lan piwulangipun.",
+            "isCorrect": true,
+            "feedback": "Pinter! 'Sendika dhawuh' lan 'cumadhang tampi' mratelakake kesiapan murid/wayah nampa ujian sesepuh.",
+            "nextDialog": 10
+          },
+          {
+            "text": "Yen mung tes sithik wae gelem, ojo angel-angel ya Mbah.",
+            "isCorrect": false,
+            "feedback": "Basa Ngoko lan nawar-nawar dhawuhe sesepuh iku kurang prayoga."
+          },
+          {
+            "text": "Waduh, kula ajrih sanget Buyut, kula badhe wangsul kemawon.",
+            "isCorrect": false,
+            "feedback": "Kalah sadurunge perang, Buyut ora seneng marang bocah sing gampang putus asa."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "speaker": "Bima",
+        "text": "Sendika dhawuh Buyut, kula cumadhang tampi sedaya pacoban lan piwulang saking Buyut.",
+        "type": "statement",
+        "nextDialog": 11
+      },
+      {
+        "id": 11,
+        "speaker": "Buyut",
+        "text": "Bagus! Pitakon kapisan: Wong tuwamu ning omah lagi ngapa wae le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Bapak saweg tindak dhateng sabin, dene Simbok saweg ngreksa griya.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! Kanggo wong tuwa nggunakake 'tindak' lan 'ngreksa griya' kanthi Krama Inggil.",
+            "nextDialog": 12
+          },
+          {
+            "text": "Bapak lagi menyang sawah, Simbok lagi masak nang pawon.",
+            "isCorrect": false,
+            "feedback": "Iki ngoko lugu, nyritakake wong tuwa marang Buyut kudu nganggo Krama."
+          },
+          {
+            "text": "Bapak kula budhal kerja, Simbok turu.",
+            "isCorrect": false,
+            "feedback": "Tembung 'turu' marang wong tuwa iku kasar, becike 'sare'."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "speaker": "Bima",
+        "text": "Bapak saweg tindak makarya dhateng sabin, dene Simbok saweg ngreksa griya, Buyut.",
+        "type": "statement",
+        "nextDialog": 13
+      },
+      {
+        "id": 13,
+        "speaker": "Buyut",
+        "text": "Lha yen kowe dhewe, apa wis adus lan sarapan sadurunge mangkat mrene mau?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Kula sampun siram lan nedha kalawau enjang, Buyut.",
+            "isCorrect": true,
+            "feedback": "Tepat sanget! Kanggo awake dhewe nganggo 'siram' utawa 'adus' (basa krama lugu/madya) lan 'nedha', dudu 'dhahar'.",
+            "nextDialog": 14
+          },
+          {
+            "text": "Kula sampun dhahar wareg sanget Buyut.",
+            "isCorrect": false,
+            "feedback": "Salah kaprah! 'Dhahar' iku krama inggil, ora pareng kanggo nyebut awake dhewe."
+          },
+          {
+            "text": "Aku wis adus resik lan mangan wareg Mbah.",
+            "isCorrect": false,
+            "feedback": "Iki basa Ngoko, ora trep marang Buyut."
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "speaker": "Bima",
+        "text": "Kula sampun siram lan sampun nedha kalawau enjang sakderengipun bidhal, Buyut.",
+        "type": "statement",
+        "nextDialog": 15
+      },
+      {
+        "id": 15,
+        "speaker": "Buyut",
+        "text": "Hemm, pranyata kowe ngerti bedane tembung krama kanggo awake dhewe lan krama kanggo wong sepuh. Pitakon sabanjure: Yen Buyut iki lagi turu, basane kepriye?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Buyut saweg sare.",
+            "isCorrect": true,
+            "feedback": "Pinter! 'Sare' iku krama inggil kanggo tembung turu tumrap wong sepuh.",
+            "nextDialog": 16
+          },
+          {
+            "text": "Buyut lagi turu pules.",
+            "isCorrect": false,
+            "feedback": "Kasar! Tembung 'turu' iku ngoko, ora pareng kanggo sesepuh."
+          },
+          {
+            "text": "Buyut saweg tilem.",
+            "isCorrect": false,
+            "feedback": "'Tilem' iku krama andhap, kanggo wong sepuh luwih trep 'sare'."
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "speaker": "Bima",
+        "text": "Kula aturaken bilih Buyut saweg sare, awit menika krama inggil ingkang trep.",
+        "type": "statement",
+        "nextDialog": 17
+      },
+      {
+        "id": 17,
+        "speaker": "Buyut",
+        "text": "Lha yen Buyut lagi ngombe wedang teh, basane kepriye le?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Buyut saweg ngunjuk unjukan teh.",
+            "isCorrect": true,
+            "feedback": "Luar biasa! 'Ngunjuk' iku krama inggil saka tembung 'ngombe'.",
+            "nextDialog": 18
+          },
+          {
+            "text": "Buyut lagi ngombe teh anget.",
+            "isCorrect": false,
+            "feedback": "'Ngombe' iku ngoko, ora sopan tumrap Buyut."
+          },
+          {
+            "text": "Buyut saweg nenggak wedang.",
+            "isCorrect": false,
+            "feedback": "Kasar banget lan ora duwe tata krama."
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "speaker": "Bima",
+        "text": "Kula aturaken 'Buyut saweg ngunjuk', mboten badhe nyebut ngombe.",
+        "type": "statement",
+        "nextDialog": 19
+      },
+      {
+        "id": 19,
+        "speaker": "Buyut",
+        "text": "Ha... ha... ha! Jebul putuku sing bagus iki ora mung wani sowan, nanging uga paham unggah-ungguh basa Jawa! Kowe lulus tes saka Buyut le!",
+        "type": "statement",
+        "nextDialog": 20
+      },
+      {
+        "id": 20,
+        "speaker": "Buyut",
+        "text": "Iki layang balesan kanggo Simbokmu wis tak teken lan tak berkahi. Apa sing arep kowe aturake sadurunge pamit bali?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Matur nuwun sanget Buyut, kula nyuwun pamit wangsul sinambi nyuwun pangestu mugi tansah pinaringan rahayu.",
+            "isCorrect": true,
+            "feedback": "Sampurna! Bima nggayuh bekti paling luhur marang Buyut kanthi tata krama lan unggah-ungguh jangkep.",
+            "nextDialog": 21
+          },
+          {
+            "text": "Matur nuwun Mbah, aku tak mulih dhisik ya selak udan.",
+            "isCorrect": false,
+            "feedback": "Iki ngoko lugu, pamitan marang Buyut kudu nganggo Krama Alus."
+          },
+          {
+            "text": "Matur nuwun sanget, duwite sangu pundi Buyut?",
+            "isCorrect": false,
+            "feedback": "Ora sopan babar pisan njaluk sangu marang sesepuh."
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "speaker": "Bima",
+        "text": "Matur nuwun sanget Buyut. Kula nyuwun pamit wangsul sinambi nyuwun donga pangestunipun Buyut.",
+        "type": "statement",
+        "nextDialog": 22
+      },
+      {
+        "id": 22,
+        "speaker": "Buyut",
+        "text": "Iya le Bima, tak lilani lan tak berkahi. Salamna marang Simbok lan Bapakmu ya. Dadiya bocah sing tansah ngurmati wong tuwa lan njaga tata krama!",
+        "type": "statement",
+        "nextDialog": null
+      }
+    ]
+  }
+}

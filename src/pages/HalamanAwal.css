@@ -1,0 +1,117 @@
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/aset game/aset background/opening.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+/* Overlay dihapus karena pakai gambar opening khusus */
+
+.splash-container.descending {
+  animation: skyDescend 6s ease-in-out forwards;
+  pointer-events: none;
+}
+
+.splash-container.descending .splash-logo,
+.splash-container.descending .btn-labuh {
+  animation: fadeOutUp 1s ease-in forwards;
+}
+
+.mist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white; /* Kabut putih tebal */
+  opacity: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.mist-overlay.active {
+  animation: fogIn 6s ease-in forwards;
+}
+
+@keyframes skyDescend {
+  0% { background-position: center 50%; transform: scale(1); }
+  100% { background-position: center 100%; transform: scale(1.3); filter: blur(5px); }
+}
+
+@keyframes fogIn {
+  0% { opacity: 0; }
+  60% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOutUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-100px); }
+}
+
+.splash-logo {
+  width: 45vw;
+  max-width: 500px;
+  animation: popGlow 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.6));
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.btn-labuh {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  animation: pulseButton 2s infinite;
+  transition: transform 0.2s;
+  z-index: 10;
+}
+
+.labuh-img {
+  width: 250px; /* Sesuaikan ukuran gambar */
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+  transition: all 0.2s;
+}
+
+.btn-labuh:hover .labuh-img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 15px 25px rgba(255, 193, 7, 0.4));
+}
+
+@keyframes pulseButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popGlow {
+  0% { transform: scale(0.5); opacity: 0; filter: drop-shadow(0 0 0px rgba(255,193,7,0)); }
+  70% { transform: scale(1.1); filter: drop-shadow(0 0 40px rgba(255,193,7,1)); }
+  100% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 20px rgba(255,193,7,0.6)); }
+}
+
+@keyframes slideInLeftSplash {
+  from { transform: translateX(-50vw); opacity: 0; }
+  to { transform: translateX(25vw); opacity: 1; }
+}
+
+@keyframes slideInRightSplash {
+  from { transform: translateX(50vw); opacity: 0; }
+  to { transform: translateX(-25vw); opacity: 1; }
+}

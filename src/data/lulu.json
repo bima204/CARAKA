@@ -1,0 +1,896 @@
+{
+  "4": {
+    "title": "LEVEL 1: SINAU AKSARA JAWA",
+    "background": "/aset game/aset background/lulu level 1.jpg",
+    "dialogs": [
+      {
+        "id": 1,
+        "speaker": "Lulu",
+        "text": "Halo Eyang! Lulu pengin sanget sinau aksara Jawa. Wonten pundi caranipun supados saget apal lan lancar maos nggih?",
+        "type": "statement",
+        "nextDialog": 2
+      },
+      {
+        "id": 2,
+        "speaker": "Eyang",
+        "text": "Wah becik temen karepmu cah ayu Lulu! Aksara Jawa iku cacahe ana rong puluh (20), diwiwiti saka larikan kapisan yaiku: Ha, Na, Ca, Ra, Ka. Ayo diwiwiti saka aksara 'Ha'.",
+        "type": "statement",
+        "nextDialog": 3
+      },
+      {
+        "id": 3,
+        "speaker": "Eyang",
+        "text": "Cobi pirsani nduk, aksara 'Ha' (ꦲ) menika wujude kaya makaten. Menawi aksara 'ꦲ' iki diwaca apa?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Ha",
+            "isCorrect": true,
+            "feedback": "Pinter sanget! Aksara 'ꦲ' iku unine Ha.",
+            "nextDialog": 4
+          },
+          {
+            "text": "Na",
+            "isCorrect": false,
+            "feedback": "Kurang trep! Aksara iki unine 'Ha', dudu 'Na'."
+          },
+          {
+            "text": "Ka",
+            "isCorrect": false,
+            "feedback": "Salah, aksara iki yaiku aksara kawitan 'Ha'."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "speaker": "Lulu",
+        "text": "Hore, Lulu sampun mangertos aksara 'Ha' (ꦲ)! Lajeng aksara ingkang kaping kalih menapa Eyang?",
+        "type": "statement",
+        "nextDialog": 5
+      },
+      {
+        "id": 5,
+        "speaker": "Eyang",
+        "text": "Aksara kaping pindho yaiku 'Na' (ꦤ). Wujude nduweni sikil loro ing ngarep lan mburi. Saiki coba pilih, endi aksara 'Na'?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "ꦏ",
+            "isCorrect": false,
+            "feedback": "Iki aksara Ka, dudu Na."
+          },
+          {
+            "text": "ꦤ",
+            "isCorrect": true,
+            "feedback": "Bagus tenan! Iki aksara 'Na' (ꦤ).",
+            "nextDialog": 6
+          },
+          {
+            "text": "ꦲ",
+            "isCorrect": false,
+            "feedback": "Menika aksara Ha ingkang nembe disinau."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "speaker": "Lulu",
+        "text": "Menawi aksara 'Ha' (ꦲ) lan 'Na' (ꦤ) kagathukake, saged kawaos dados tembung menapa Eyang?",
+        "type": "statement",
+        "nextDialog": 7
+      },
+      {
+        "id": 7,
+        "speaker": "Eyang",
+        "text": "Pitakonmu pinter temenan! Yen aksara 'ꦲ' ketemu 'ꦤ' (ꦲꦤ), unine dadi apa hayo Lulu?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Hana (Ana)",
+            "isCorrect": true,
+            "feedback": "Leres sanget! 'ꦲꦤ' diwaca Hana utawa Ana, tegese 'ada'.",
+            "nextDialog": 8
+          },
+          {
+            "text": "Kana",
+            "isCorrect": false,
+            "feedback": "Kurang trep! Aksara ngarep iku Ha, dudu Ka."
+          },
+          {
+            "text": "Naha",
+            "isCorrect": false,
+            "feedback": "Kewalik cah ayu, Ha ing ngarep lan Na ing mburi."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "speaker": "Lulu",
+        "text": "Wah asyik sanget Eyang! Saklajengipun wonten aksara 'Ca', 'Ra', lan 'Ka' nggih?",
+        "type": "statement",
+        "nextDialog": 9
+      },
+      {
+        "id": 9,
+        "speaker": "Eyang",
+        "text": "Bener nduk. Aksara katelu yaiku 'Ca' (ꦕ), kaping papat 'Ra' (ꦫ), lan kaping lima 'Ka' (ꦏ). Saiki coba bedakake, aksara 'ꦫ' iki unine apa?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Ra",
+            "isCorrect": true,
+            "feedback": "Jempolan! Aksara 'ꦫ' iku unine Ra.",
+            "nextDialog": 10
+          },
+          {
+            "text": "Ca",
+            "isCorrect": false,
+            "feedback": "Aksara 'Ca' iku wujude 'ꦕ', yen iki 'Ra'."
+          },
+          {
+            "text": "Ka",
+            "isCorrect": false,
+            "feedback": "Kurang tepat, iki aksara 'Ra'."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "speaker": "Lulu",
+        "text": "Lulu sampun apal 'Ha, Na, Ca, Ra, Ka' (ꦲ ꦤ ꦕ ꦫ ꦏ). Sakmenika cobi tes Lulu malih Eyang!",
+        "type": "statement",
+        "nextDialog": 11
+      },
+      {
+        "id": 11,
+        "speaker": "Eyang",
+        "text": "Hehe, bocah sregep! Coba pilihen endi aksara 'Ca' ing antarane pilihan iki?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "ꦫ",
+            "isCorrect": false,
+            "feedback": "Iki aksara Ra."
+          },
+          {
+            "text": "ꦏ",
+            "isCorrect": false,
+            "feedback": "Iki aksara Ka."
+          },
+          {
+            "text": "ꦕ",
+            "isCorrect": true,
+            "feedback": "Bener banget! 'ꦕ' iku aksara Ca.",
+            "nextDialog": 12
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "speaker": "Lulu",
+        "text": "Menawi aksara 'Ka' wujude kados pundi Eyang? Kadosipun wonten lekukanipun ing tengah.",
+        "type": "statement",
+        "nextDialog": 13
+      },
+      {
+        "id": 13,
+        "speaker": "Eyang",
+        "text": "Iya bener, aksara 'Ka' (ꦏ) kaya nduwe tumpukan ing tengah. Endi sing bener aksara 'Ka'?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "ꦏ",
+            "isCorrect": true,
+            "feedback": "Pinter tenan! Iki aksara 'Ka' (ꦏ).",
+            "nextDialog": 14
+          },
+          {
+            "text": "ꦲ",
+            "isCorrect": false,
+            "feedback": "Iki aksara Ha."
+          },
+          {
+            "text": "ꦤ",
+            "isCorrect": false,
+            "feedback": "Iki aksara Na."
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "speaker": "Lulu",
+        "text": "Menawi ukara 'Ca - Ra - Ka' (ꦕꦫꦏ) menika gadhah teges menapa Eyang?",
+        "type": "statement",
+        "nextDialog": 15
+      },
+      {
+        "id": 15,
+        "speaker": "Eyang",
+        "text": "Tembung 'Caraka' (ꦕꦫꦏ) iku tegese utusan utawa duta cah ayu. Yen aksara 'ꦫ' digathukake karo 'ꦏ' (ꦫꦏ), unine dadi apa?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Raka",
+            "isCorrect": true,
+            "feedback": "Tepat! 'ꦫꦏ' diwaca Raka (kakak/saudara tua).",
+            "nextDialog": 16
+          },
+          {
+            "text": "Kara",
+            "isCorrect": false,
+            "feedback": "Kewalik, aksara kapisan iku Ra lan kapindho Ka."
+          },
+          {
+            "text": "Caka",
+            "isCorrect": false,
+            "feedback": "Aksara ngarep iku Ra dudu Ca."
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "speaker": "Lulu",
+        "text": "Menawi tembung 'Kaca' kaserat mawi aksara Jawa, urutanipun aksara menapa kemawon Eyang?",
+        "type": "statement",
+        "nextDialog": 17
+      },
+      {
+        "id": 17,
+        "speaker": "Eyang",
+        "text": "Ayo coba dipikir nduk, tembung 'Kaca' iku kasusun saka aksara apa dhisik?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "ꦏꦕ (Ka - Ca)",
+            "isCorrect": true,
+            "feedback": "Luar biasa! 'Kaca' yaiku gabungan aksara Ka (ꦏ) lan Ca (ꦕ).",
+            "nextDialog": 18
+          },
+          {
+            "text": "ꦕꦏ (Ca - Ka)",
+            "isCorrect": false,
+            "feedback": "Iku diwaca Caka, dudu Kaca."
+          },
+          {
+            "text": "ꦲꦏ (Ha - Ka)",
+            "isCorrect": false,
+            "feedback": "Iku diwaca Haka."
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "speaker": "Lulu",
+        "text": "Wah, sinau aksara Jawa menika jebul gampil sanget lan nyenengaken menawi dipun sinau kanthi tlaten!",
+        "type": "statement",
+        "nextDialog": 19
+      },
+      {
+        "id": 19,
+        "speaker": "Eyang",
+        "text": "Pancen bener cah ayu. Nah, pitakon pungkasan: Larikan kapisan 'Ha-Na-Ca-Ra-Ka' menika gadhah makna filosofis apa?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Ana utusan (utusan dalem/caraka)",
+            "isCorrect": true,
+            "feedback": "Hebat sanget! 'Hana caraka' tegese 'ana utusan'.",
+            "nextDialog": 20
+          },
+          {
+            "text": "Padha padu lan pasulayan",
+            "isCorrect": false,
+            "feedback": "Pasulayan iku 'padha jayanya / mangga bathanga'."
+          },
+          {
+            "text": "Padha sekti mandraguna",
+            "isCorrect": false,
+            "feedback": "Kurang trep! 'Ha-na-ca-ra-ka' tegese ana utusan."
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "speaker": "Lulu",
+        "text": "Matur nuwun sanget Eyang! Lulu sakmenika sampun apal lan paham aksara dhasar Ha-Na-Ca-Ra-Ka kanthi cetha!",
+        "type": "statement",
+        "nextDialog": 21
+      },
+      {
+        "id": 21,
+        "speaker": "Eyang",
+        "text": "Padha-padha nduk Lulu cah ayu sing pinter. Terusna sinaumu menyang aksara Candhake (Data Sawala) ing level sabanjure ya!",
+        "type": "statement",
+        "nextDialog": null
+      }
+    ]
+  },
+  "5": {
+    "title": "LEVEL 2: PASANGAN AKSARA JAWA",
+    "background": "/aset game/aset background/lulu level 2.jpg",
+    "dialogs": [
+      {
+        "id": 1,
+        "speaker": "Lulu",
+        "text": "Sugeng enjang Bu Sri. Nyuwun pangapunten, Lulu badhe nyuwun pirsa babagan aksara pasangan ing aksara Jawa.",
+        "type": "statement",
+        "nextDialog": 2
+      },
+      {
+        "id": 2,
+        "speaker": "Bu Sri",
+        "text": "Sugeng enjang nduk Lulu cah ayu. Wah, mongkog sanget manah kula pirsani semangat sinau panjenengan. Menapa ingkang badhe kasuwun pirsa ngenani aksara pasangan?",
+        "type": "statement",
+        "nextDialog": 3
+      },
+      {
+        "id": 3,
+        "speaker": "Lulu",
+        "text": "Kula dereng mangertos saestu, kenging menapa aksara Jawa menika kedah nggadhahi pasangan nggih Bu Sri?",
+        "type": "statement",
+        "nextDialog": 4
+      },
+      {
+        "id": 4,
+        "speaker": "Bu Sri",
+        "text": "Pitakenan ingkang sae sanget. Miturut pamanggih panjenengan, menapa pigunanipun aksara pasangan menika?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Kagem mateni (ngicali) swanten vokal aksara ing sangajengipun.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! Pasangan menika ginanipun kangge mateni aksara sigeg (konsonan mati) sadurunge.",
+            "nextDialog": 5
+          },
+          {
+            "text": "Kagem damel aksara dados langkung ageng lan sae.",
+            "isCorrect": false,
+            "feedback": "Kirang trep. Pasangan sanes kagem rerenggan utawi ndamel ageng."
+          },
+          {
+            "text": "Kagem nggantos tandha titik kaliyan koma.",
+            "isCorrect": false,
+            "feedback": "Salah, tandha waosan ing aksara Jawa menika pada andhegan utawi pada lingsa."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "speaker": "Lulu",
+        "text": "O, dadosipun aksara pasangan menika kagem mateni swanten aksara ingkang sigeg. Lajeng wonten pinten cacahipun aksara pasangan menika Bu Sri?",
+        "type": "statement",
+        "nextDialog": 6
+      },
+      {
+        "id": 6,
+        "speaker": "Bu Sri",
+        "text": "Inggih leres. Amargi aksara legena wonten kalih dasa (20), lajeng cacahipun pasangan wonten pinten cah ayu?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Wonten sedasa (10)",
+            "isCorrect": false,
+            "feedback": "Kirang trep, saben aksara Jawa nggadhahi pasangan piyambak-piyambak."
+          },
+          {
+            "text": "Wonten kalih dasa (20)",
+            "isCorrect": true,
+            "feedback": "Jempolan! Cacahing pasangan ugi wonten 20, sami kaliyan aksara carakanipun.",
+            "nextDialog": 7
+          },
+          {
+            "text": "Wonten gangsal likur (25)",
+            "isCorrect": false,
+            "feedback": "Salah, aksara Jawa carakan namung wonten 20."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "speaker": "Lulu",
+        "text": "Inggih Bu Sri, dados cacahipun sami-sami kalih dasa. Lajeng ing pundi papan panyeratanipun aksara pasangan menika?",
+        "type": "statement",
+        "nextDialog": 8
+      },
+      {
+        "id": 8,
+        "speaker": "Bu Sri",
+        "text": "Kathah-kathahipun aksara pasangan kaserat wonten ing pundi papanipun nduk?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Ing ngandhapipun (ngisor) aksara ingkang dipunpejahi.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! Pasangan limrahipun dipunserat wonten ing ngandhaping aksara.",
+            "nextDialog": 9
+          },
+          {
+            "text": "Ing nginggilipun (dhuwur) garis seratan.",
+            "isCorrect": false,
+            "feedback": "Ing nginggil menika papanipun sandhangan swara kados wulu utawi layar."
+          },
+          {
+            "text": "Ing sangajengipun (ngarep) aksara ingkang dipunpejahi.",
+            "isCorrect": false,
+            "feedback": "Kirang trep, panyeratanipun boten wonten ing ngajeng."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "speaker": "Lulu",
+        "text": "Menapa sedaya pasangan kaserat ing ngandhap Bu Sri? Menapa wonten ingkang kaserat sajajar kaliyan aksaranipun?",
+        "type": "statement",
+        "nextDialog": 10
+      },
+      {
+        "id": 10,
+        "speaker": "Bu Sri",
+        "text": "Wonten tigang pasangan ingkang wujudipun kaserat sajajar wonten ing sisih tengen. Pasangan menapa kemawon nduk?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Pasangan Ha, Sa, kaliyan Pa",
+            "isCorrect": true,
+            "feedback": "Pinter sanget! Pasangan Ha (꧀ꦲ), Sa (꧀ꦱ), lan Pa (꧀ꦥ) manggen ing sisih tengen sajajar kaliyan aksara.",
+            "nextDialog": 11
+          },
+          {
+            "text": "Pasangan Ka, Da, kaliyan Ta",
+            "isCorrect": false,
+            "feedback": "Pasangan Ka, Da, lan Ta kaserat wonten ing ngandhap."
+          },
+          {
+            "text": "Pasangan Na, Ca, kaliyan Ra",
+            "isCorrect": false,
+            "feedback": "Salah, pasangan menika sedaya manggen wonten ing ngandhap."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "speaker": "Lulu",
+        "text": "Matur nuwun Bu Sri, Lulu sakmenika mangertos bilih Pasangan Ha, Sa, kaliyan Pa kaserat sajajar ing sisih tengen.",
+        "type": "statement",
+        "nextDialog": 12
+      },
+      {
+        "id": 12,
+        "speaker": "Bu Sri",
+        "text": "Sakmenika cobi pirsani, menawi tembung 'Bapak tindak' kaserat mawi aksara Jawa, pasangan menapa ingkang dipun-ginakaken?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Pasangan Ta (꧀ꦠ), amargi aksara 'k' ing tembung Bapak dipunpejahi.",
+            "isCorrect": true,
+            "feedback": "Luar biasa! Aksara Ka mati dipunpejahi dening pasangan Ta (꧀ꦠ) ing tembung tindak.",
+            "nextDialog": 13
+          },
+          {
+            "text": "Pasangan Ba (꧀ꦧ), amargi tembung ngajengipun Bapak.",
+            "isCorrect": false,
+            "feedback": "Kirang trep, aksara ingkang mati Ka, mila ingkang ngginakaken pasangan aksara Ta."
+          },
+          {
+            "text": "Pasangan Na (꧀ꦤ), amargi wonten aksara n.",
+            "isCorrect": false,
+            "feedback": "Salah, aksara sasampunipun k sigeg inggih menika Ta."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "speaker": "Lulu",
+        "text": "Leres sanget Bu Sri, amargi 'k' ing tembung Bapak sigeg, mila lajeng dipunsambung pasangan Ta kagem 'ti'.",
+        "type": "statement",
+        "nextDialog": 14
+      },
+      {
+        "id": 14,
+        "speaker": "Bu Sri",
+        "text": "Cobi nduk Lulu, pasangan menapa ingkang wujudipun wutuh sami kaliyan aksara aslinipun?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Pasangan Ra, Ya, Ga, kaliyan Nga",
+            "isCorrect": true,
+            "feedback": "Tepat sanget! Pasangan Ra, Ya, Ga, lan Nga wujudipun sami wutuh kados aksara carakanipun, namung manggen ing ngandhap.",
+            "nextDialog": 15
+          },
+          {
+            "text": "Pasangan Ha, Na, Ca, kaliyan Ka",
+            "isCorrect": false,
+            "feedback": "Pasangan Ha, Na, Ca, lan Ka menika gadhah wujud owah-owahan piyambak."
+          },
+          {
+            "text": "Pasangan Da, Ta, Sa, kaliyan Wa",
+            "isCorrect": false,
+            "feedback": "Kirang trep, wujud pasanganipun beda kaliyan aksara aslinipun."
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "speaker": "Lulu",
+        "text": "Kula mangertos Bu Sri. Menawi tembung 'Mangan sega', aksara 'n' ing tembung 'mangan' dipunpejahi mawi pasangan menapa?",
+        "type": "statement",
+        "nextDialog": 16
+      },
+      {
+        "id": 16,
+        "speaker": "Bu Sri",
+        "text": "Mangga cobi dipun-wangsuli cah ayu, pasangan menapa ingkang dipun-ginakaken ing tembung 'Mangan sega'?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Pasangan Sa (꧀ꦱ), kaserat sajajar ing sisih tengen aksara Na sigeg.",
+            "isCorrect": true,
+            "feedback": "Bagus sanget! Aksara Na sigeg dipunpejahi dening pasangan Sa (꧀ꦱ) sajajar ing tengenipun.",
+            "nextDialog": 17
+          },
+          {
+            "text": "Pasangan Ga (꧀ꦒ), kaserat ing ngandhap.",
+            "isCorrect": false,
+            "feedback": "Kirang trep, aksara sasampunipun n sigeg inggih menika Sa, sanes Ga."
+          },
+          {
+            "text": "Pasangan Ma (꧀ꦩ), kaserat ing ngandhap.",
+            "isCorrect": false,
+            "feedback": "Salah, tembungipun 'sega' mila ngginakaken pasangan Sa."
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "speaker": "Lulu",
+        "text": "Lajeng menawi ing pungkasan ukara (akhir kalimat) wonten aksara mati, menapa ugi ngginakaken pasangan Bu Sri?",
+        "type": "statement",
+        "nextDialog": 18
+      },
+      {
+        "id": 18,
+        "speaker": "Bu Sri",
+        "text": "Pitakenan ingkang wigatos sanget! Menawi aksara sigeg wonten ing pungkasan ukara utawi pungkasan tembung ingkang mandheg, ngginakaken menapa nduk?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Ngginakaken Sandhangan Pangkon (Pathen / ꧀)",
+            "isCorrect": true,
+            "feedback": "Jempolan! Ing pungkasan ukara boten nganggo pasangan nanging nganggo Pangkon (꧀).",
+            "nextDialog": 19
+          },
+          {
+            "text": "Tetep ngginakaken pasangan sembarangan.",
+            "isCorrect": false,
+            "feedback": "Boten pareng, amargi ing pungkasan sampun boten wonten aksara malih ingkang dipunsambung."
+          },
+          {
+            "text": "Dipunbikak kemawon tanpa tandha menapa-menapa.",
+            "isCorrect": false,
+            "feedback": "Menawi boten wonten tandhanipun, unine dados swanten vokal 'a'."
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "speaker": "Lulu",
+        "text": "Inggih Bu Sri, dados pasangan menika namung kagem ing satengahing tembung utawi ukara, dene ing pungkasan ngangge Pangkon.",
+        "type": "statement",
+        "nextDialog": 20
+      },
+      {
+        "id": 20,
+        "speaker": "Bu Sri",
+        "text": "Leres sanget. Sakmenika pitakenan pungkasan: Kenging menapa ing satengahing ukara boten kepareng ngginakaken sandhangan pangkon (kajawi paugeran mligi)?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Amargi sandhangan pangkon saged medhotaken (memotong) seratan, mila kedah ngangge pasangan.",
+            "isCorrect": true,
+            "feedback": "Luar biasa Lulu cah ayu! Pangkon ing tengahing ukara boten kepareng amargi fungsi panyambung dipun-gantos dening pasangan.",
+            "nextDialog": 21
+          },
+          {
+            "text": "Amargi sandhangan pangkon menika awrat sanget dipunserat.",
+            "isCorrect": false,
+            "feedback": "Sanes bab awrat utawi gampil, nanging bab paugeran baku seratan Jawa."
+          },
+          {
+            "text": "Amargi pangkon namung kagem aksara swara.",
+            "isCorrect": false,
+            "feedback": "Salah, pangkon menika kagem mateni aksara sigeg konsonan."
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "speaker": "Lulu",
+        "text": "Matur nuwun sanget Bu Sri! Piwulang panjenengan cetha sanget, sakmenika Lulu sampun paham paugeran panyeratanipun aksara pasangan.",
+        "type": "statement",
+        "nextDialog": 22
+      },
+      {
+        "id": 22,
+        "speaker": "Bu Sri",
+        "text": "Sami-sami nduk Lulu cah ayu. Panjenengan pancen murid ingkang lantip lan sregep. Terusna sinau supados saged maos sastra Jawa kanthi sampurna nggih!",
+        "type": "statement",
+        "nextDialog": null
+      }
+    ]
+  },
+  "6": {
+    "title": "LEVEL 3: UJIAN MARANG SESEPUH",
+    "background": "/aset game/aset background/lulu level 3.jpg",
+    "dialogs": [
+      {
+        "id": 1,
+        "speaker": "Lulu",
+        "text": "(Ing batin: Wonten ing Candi Borobudur menika, kula badhe sowan marang Ki Sesepuh ingkang winasis babagan sastra Jawa. Kula kedah siyap nampi ujian pungkasan).",
+        "type": "statement",
+        "nextDialog": 2
+      },
+      {
+        "id": 2,
+        "speaker": "Lulu",
+        "text": "Kula nuwun Ki Sesepuh, kepareng kula Lulu sowan ngadhep panjenengan.",
+        "type": "statement",
+        "nextDialog": 3
+      },
+      {
+        "id": 3,
+        "speaker": "Sesepuh",
+        "text": "Sugeng rawuh nduk Lulu cah ayu. Wis suwe aku krungu babagan krenteg lan semangatmu sinau aksara Jawa. Apa bener kowe kepengin ngrampungake pasinaonmu ing papan kene?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Inggih leres sanget Ki Sesepuh, kula kersa lan cumadhang nampi sedaya pandangon panjenengan.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! 'Cumadhang nampi pandangon' mratelakake sikap andhap asor lan siap diuji dening guru/sesepuh.",
+            "nextDialog": 4
+          },
+          {
+            "text": "Iya Ki Sesepuh, aku wis pinter aksara Jawa saiki.",
+            "isCorrect": false,
+            "feedback": "Ora pareng gumede (sombong) ing ngarepe sesepuh, gunakake basa Krama Alus."
+          },
+          {
+            "text": "Mung pengin cepet rampung wae kok Mbah.",
+            "isCorrect": false,
+            "feedback": "Kurang trapsila lan ora nuduhake niat sinau sing tulus."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "speaker": "Lulu",
+        "text": "Inggih leres sanget Ki Sesepuh, kula kersa lan cumadhang nampi sedaya pandangon panjenengan.",
+        "type": "statement",
+        "nextDialog": 5
+      },
+      {
+        "id": 5,
+        "speaker": "Sesepuh",
+        "text": "Becik temenan nduk. Pasinaon pungkasan iki ngenani Sandhangan Aksara Jawa. Pitakon kapisan: Aksara legena iku unine vokal 'a'. Yen kepengin muni swara 'i' (tuladhane: Siti), kudu diwenehi sandhangan apa?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Sandhangan Wulu (ꦶ)",
+            "isCorrect": true,
+            "feedback": "Pinter sanget! Wulu wujudipun bunder alit ing nginggil aksara kagem swanten 'i'.",
+            "nextDialog": 6
+          },
+          {
+            "text": "Sandhangan Suku (ꦸ)",
+            "isCorrect": false,
+            "feedback": "Suku iku kagem ngowahi swara dadi 'u'."
+          },
+          {
+            "text": "Sandhangan Taling (ꦺ)",
+            "isCorrect": false,
+            "feedback": "Taling iku kagem ngowahi swara dadi 'e'."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "speaker": "Lulu",
+        "text": "Kula mangertos Ki Sesepuh, wulu (ꦶ) menika kagem swanten 'i'. Lajeng menawi kagem swanten 'u', ngginakaken Suku nggih?",
+        "type": "statement",
+        "nextDialog": 7
+      },
+      {
+        "id": 7,
+        "speaker": "Sesepuh",
+        "text": "Bener. Saiki coba bedakake: Yen tembung 'Soto' kaserat mawi aksara Jawa, sandhangan swara apa sing dianggo kanggo ngowahi dadi swara 'o'?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Sandhangan Taling-Tarung (ꦺ...ꦴ)",
+            "isCorrect": true,
+            "feedback": "Jempolan! Taling-Tarung (ꦺ...ꦴ) nyapit aksara kagem ngasilaken swanten 'o'.",
+            "nextDialog": 8
+          },
+          {
+            "text": "Sandhangan Pepet (ꦼ)",
+            "isCorrect": false,
+            "feedback": "Pepet iku kagem swara 'e' (kados ing tembung sega/sepet)."
+          },
+          {
+            "text": "Sandhangan Wulu (ꦶ)",
+            "isCorrect": false,
+            "feedback": "Wulu iku kagem swara 'i'."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "speaker": "Lulu",
+        "text": "Leres sanget, taling-tarung (ꦺ...ꦴ) kagem swanten 'o'. Lajeng kados pundi menawi wonten konsonan mati pungkasan Ki Sesepuh?",
+        "type": "statement",
+        "nextDialog": 9
+      },
+      {
+        "id": 9,
+        "speaker": "Sesepuh",
+        "text": "Nah, ana sandhangan panyigeg wanda. Yen ing pungkasan tembung ana swara mati 'r' (tuladhane: Pasar), apa kudu nganggo aksara Ra dipangkon?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Boten pareng, kedah ngginakaken Sandhangan Layar (ꦂ).",
+            "isCorrect": true,
+            "feedback": "Luar biasa! Swara 'r' mati ing pungkasan wanda boten kepareng dipangkon, nanging nganggo Layar (ꦂ).",
+            "nextDialog": 10
+          },
+          {
+            "text": "Kena wae nganggo Ra dipangkon.",
+            "isCorrect": false,
+            "feedback": "Salah, miturut paugeran baku kudu nggunakake Layar."
+          },
+          {
+            "text": "Ditinggal tanpa tandha.",
+            "isCorrect": false,
+            "feedback": "Yen ora diwenehi Layar, unine dadi 'Pasara'."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "speaker": "Lulu",
+        "text": "Inggih Ki Sesepuh, kagem 'r' sigeg ngginakaken Layar (ꦂ). Lajeng menawi 'h' mati ing pungkasan kados pundi?",
+        "type": "statement",
+        "nextDialog": 11
+      },
+      {
+        "id": 11,
+        "speaker": "Sesepuh",
+        "text": "Yen swara 'h' mati (tuladhane: Gajah), sandhangan panyigeg apa sing dianggo cah ayu?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Sandhangan Wignyan (ꦃ)",
+            "isCorrect": true,
+            "feedback": "Tepat sanget! Wignyan (ꦃ) iku panyigeg kagem swanten 'h' ing pungkasan wanda.",
+            "nextDialog": 12
+          },
+          {
+            "text": "Sandhangan Cecak (ꦁ)",
+            "isCorrect": false,
+            "feedback": "Cecak iku kagem swara mati 'ng'."
+          },
+          {
+            "text": "Sandhangan Pangkon (꧀)",
+            "isCorrect": false,
+            "feedback": "Aksara Ha boten kepareng dipangkon, kedah ngangge Wignyan."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "speaker": "Lulu",
+        "text": "Kula mangertos sanget, Layar kagem 'r', Wignyan kagem 'h', dene Cecak kagem 'ng' (ꦁ).",
+        "type": "statement",
+        "nextDialog": 13
+      },
+      {
+        "id": 13,
+        "speaker": "Sesepuh",
+        "text": "Pinter temenan nduk Lulu cah ayu. Saiki pitakon wacana: Ukara 'ꦧꦥꦏ꧀ꦩꦕꦏꦺꦴꦫꦤ꧀' menika menawi kawaos mawi aksara Latin dados menapa?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Bapak maca koran",
+            "isCorrect": true,
+            "feedback": "Jempolan! Panjenengan saged maos ukara jangkep mawi pasangan lan sandhangan taling-tarung.",
+            "nextDialog": 14
+          },
+          {
+            "text": "Bapak mangan sega",
+            "isCorrect": false,
+            "feedback": "Kirang trep, aksara ingkang kaserat inggih menika 'maca koran'."
+          },
+          {
+            "text": "Bapak tindak pasar",
+            "isCorrect": false,
+            "feedback": "Salah, pirsani seratan taling-tarung kagem 'ko'."
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "speaker": "Lulu",
+        "text": "Alhamdulillah, Lulu sampun saged maos ukara jangkep kanthi leres!",
+        "type": "statement",
+        "nextDialog": 15
+      },
+      {
+        "id": 15,
+        "speaker": "Sesepuh",
+        "text": "Coba siji maneh cah ayu: Ukara 'ꦱꦶꦤꦲꦸꦲꦏ꧀ꦱꦫꦗꦮ' menika menawi kawaos unine dadi kepriye?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Sinau aksara Jawa",
+            "isCorrect": true,
+            "feedback": "Sampurna! 'Si' (wulu), 'na', 'u' (suku), 'a-k' (pasangan sa), 'ra', 'ja', 'wa'.",
+            "nextDialog": 16
+          },
+          {
+            "text": "Srawung kanca Jawa",
+            "isCorrect": false,
+            "feedback": "Kirang trep, tembung ngajeng ngginakaken wulu lan suku 'sinau'."
+          },
+          {
+            "text": "Sinau basa krama",
+            "isCorrect": false,
+            "feedback": "Aksara ingkang kaserat inggih menika 'aksara jawa'."
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "speaker": "Lulu",
+        "text": "Matur nuwun Ki Sesepuh. Kula bingah sanget saged maos ukara 'Sinau aksara Jawa'.",
+        "type": "statement",
+        "nextDialog": 17
+      },
+      {
+        "id": 17,
+        "speaker": "Sesepuh",
+        "text": "Ha... ha... ha! Luar biasa nduk Lulu. Ora sia-sia kowe sinau saka Eyang, Bu Sri, nganti tekan kene. Saiki pitakon pungkasan: Apa gunane kita minangka generasi mudha nglestarekake aksara Jawa?",
+        "type": "question",
+        "choices": [
+          {
+            "text": "Nglestarekake warisan luhur budaya bangsa supados boten cures lan tansah ngrembaka.",
+            "isCorrect": true,
+            "feedback": "Leres sanget! Aksara Jawa menika jati dhiri lan warisan adiluhung ingkang kedah dipunjagi.",
+            "nextDialog": 18
+          },
+          {
+            "text": "Supados dipun-alem dening tiyang kathah.",
+            "isCorrect": false,
+            "feedback": "Kirang prayoga menawi sinau namung kagem pados pangalembono."
+          },
+          {
+            "text": "Namung kagem nggarap tugas sekolah kemawon.",
+            "isCorrect": false,
+            "feedback": "Sinau budaya menika boten namung formalitas nanging ngreksa jati dhiri bangsa."
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "speaker": "Lulu",
+        "text": "Matur nuwun sanget Ki Sesepuh awit sedaya pitedah, piwulang, lan berkah panjenengan.",
+        "type": "statement",
+        "nextDialog": 19
+      },
+      {
+        "id": 19,
+        "speaker": "Sesepuh",
+        "text": "Padha-padha nduk Lulu cah ayu. Kowe resmi lulus kabeh ujian Aksara Jawa ing CARAKA! Terusna sinau, lan tuladhaana kanca-kancamu supaya tresna marang basa lan sastra Jawa ya nduk!",
+        "type": "statement",
+        "nextDialog": null
+      }
+    ]
+  }
+}

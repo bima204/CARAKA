@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap');
+
+.aksara-page-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/aset game/aset background/aset halaman awal.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Top Navigation Bar */
+.aksara-top-bar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  gap: 16px;
+}
+
+.aksara-top-bar .btn-back-home {
+  position: fixed !important;
+  top: 25px !important;
+  left: 25px !important;
+  z-index: 100 !important;
+  margin: 0 !important;
+}
+
+.aksara-header-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(248, 209, 121, 0.5);
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+/* Tab Navigation Buttons */
+.aksara-tab-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  background: rgba(45, 25, 15, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 8px 12px;
+  border-radius: 40px;
+  border: 2px solid rgba(248, 209, 121, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.aksara-tab-btn {
+  padding: 12px 28px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: 30px;
+  border: none;
+  background: transparent;
+  color: #F8D179;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: inherit;
+}
+
+.aksara-tab-btn:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.aksara-tab-btn.active {
+  background: linear-gradient(135deg, #F8D179, #d97706);
+  color: #1e1108;
+  box-shadow: 0 6px 15px rgba(217, 119, 6, 0.4);
+  transform: scale(1.03);
+}
+
+/* Main Content Card Box */
+.aksara-content-card {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  padding: 35px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 4px solid #8c5324;
+  margin-bottom: 40px;
+  animation: fadeInContent 0.4s ease;
+}
+
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.aksara-section-info {
+  margin-bottom: 25px;
+  border-bottom: 2px dashed #d97706;
+  padding-bottom: 15px;
+}
+
+.aksara-section-info h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #78350f;
+  margin: 0 0 8px 0;
+}
+
+.aksara-section-info p {
+  font-size: 1.2rem;
+  color: #451a03;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Grid Modern untuk Aksara Nglegena */
+.aksara-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.aksara-card-modern {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 2px solid #f59e0b;
+  border-radius: 18px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.aksara-card-modern:hover {
+  transform: translateY(-5px);
+  border-color: #b45309;
+  box-shadow: 0 12px 24px rgba(217, 119, 6, 0.25);
+  background: #fff;
+}
+
+.aksara-symbol {
+  font-size: 3.5rem;
+  color: #78350f;
+  margin-bottom: 5px;
+  line-height: 1.1;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.aksara-label {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #b45309;
+}
+
+.aksara-hint {
+  font-size: 0.95rem;
+  color: #78350f;
+  font-style: italic;
+  margin-top: 3px;
+}
+
+/* Tabel Pasangan Aksara */
+.table-responsive-box {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.aksara-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 1.15rem;
+}
+
+.aksara-table th {
+  background: linear-gradient(90deg, #78350f, #92400e);
+  color: #fff;
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.aksara-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #fed7aa;
+  color: #292524;
+}
+
+.aksara-table tr:nth-child(even) {
+  background-color: #fffdfa;
+}
+
+.aksara-table tr:hover {
+  background-color: #fef3c7;
+}
+
+.table-char-primary {
+  font-size: 2.2rem;
+  color: #78350f;
+  font-weight: bold;
+}
+
+.table-char-accent {
+  font-size: 2.2rem;
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.table-contoh {
+  font-family: inherit;
+  font-weight: 600;
+  color: #451a03;
+}
+
+.badge-letak {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.badge-tengen {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.badge-ngisor {
+  background: #fef08a;
+  color: #854d0e;
+  border: 1px solid #fde047;
+}
+
+/* Sandhangan Styles */
+.sandhangan-group-box {
+  margin-bottom: 30px;
+}
+
+.sandhangan-group-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #9a3412;
+  margin: 0 0 15px 0;
+  border-left: 6px solid #d97706;
+  padding-left: 12px;
+}
+
+.sandhangan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.sandhangan-card {
+  background: #fff;
+  border: 2px solid #fed7aa;
+  border-radius: 16px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  transition: all 0.2s ease;
+}
+
+.sandhangan-card:hover {
+  border-color: #ea580c;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(234, 88, 12, 0.15);
+}
+
+.sandhangan-char {
+  font-size: 3.2rem;
+  color: #c2410c;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sandhangan-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #431407;
+  text-align: center;
+}
+
+.sandhangan-sound {
+  font-size: 1.05rem;
+  color: #78350f;
+  margin: 4px 0;
+  text-align: center;
+}
+
+.sandhangan-example {
+  font-size: 0.95rem;
+  color: #57534e;
+  font-style: italic;
+  margin-top: 4px;
+  text-align: center;
+}

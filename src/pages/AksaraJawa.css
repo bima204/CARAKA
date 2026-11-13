@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Noto+Sans+Javanese:wght@400;700&display=swap');
 
 .aksara-page-container {
   width: 100vw;
@@ -145,16 +145,39 @@
   text-align: center;
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   transition: all 0.25s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
 .aksara-card-modern:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.03);
   border-color: #b45309;
   box-shadow: 0 12px 24px rgba(217, 119, 6, 0.25);
-  background: #fff;
+  background: #ffffff;
+}
+
+.aksara-card-modern.selected {
+  border-color: #78350f;
+  background: #fef08a;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px #f59e0b, 0 12px 24px rgba(217, 119, 6, 0.3);
+}
+
+.aksara-click-hint {
+  font-size: 0.78rem;
+  color: #92400e;
+  margin-top: 6px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.aksara-card-modern:hover .aksara-click-hint {
+  opacity: 1;
+  color: #b45309;
 }
 
 .aksara-symbol {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
   font-size: 3.5rem;
   color: #78350f;
   margin-bottom: 5px;
@@ -173,6 +196,107 @@
   color: #78350f;
   font-style: italic;
   margin-top: 3px;
+}
+
+/* ==========================================================================
+   STYLING TAB PASANGAN AKSARA (GRID KARTU INTERAKTIF & DETAIL)
+   ========================================================================== */
+.pasangan-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.pasangan-card-modern {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 2px solid #f59e0b;
+  border-radius: 18px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.pasangan-card-modern:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: #b45309;
+  box-shadow: 0 10px 20px rgba(217, 119, 6, 0.22);
+  background: #ffffff;
+}
+
+.pasangan-card-modern.selected {
+  border-color: #78350f;
+  background: #fef08a;
+  transform: scale(1.04);
+  box-shadow: 0 0 0 3px #f59e0b, 0 10px 20px rgba(217, 119, 6, 0.25);
+}
+
+.pasangan-char-display {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 3rem;
+  color: #b91c1c;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.08);
+}
+
+.pasangan-label-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #78350f;
+  margin-bottom: 6px;
+}
+
+.badge-letak-card {
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.pasangan-table-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #78350f;
+  margin: 15px 0 12px 0;
+}
+
+.pasangan-table-row {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pasangan-table-row:hover {
+  background-color: #fef3c7 !important;
+}
+
+.btn-table-detail {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-table-detail:hover {
+  background: linear-gradient(135deg, #fbbf24, #b45309);
+  transform: scale(1.05);
+}
+
+.pasangan-modal-box {
+  width: auto !important;
+  min-width: 220px;
+  padding: 10px 24px;
 }
 
 /* Tabel Pasangan Aksara */
@@ -274,20 +398,53 @@
 .sandhangan-card {
   background: #fff;
   border: 2px solid #fed7aa;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
 .sandhangan-card:hover {
   border-color: #ea580c;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(234, 88, 12, 0.15);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 22px rgba(234, 88, 12, 0.2);
+  background: #fffdfa;
+}
+
+.sandhangan-card.selected {
+  border-color: #78350f;
+  background: #fef08a;
+  transform: scale(1.03);
+  box-shadow: 0 0 0 3px #f59e0b, 0 10px 20px rgba(217, 119, 6, 0.25);
+}
+
+.sandhangan-click-hint {
+  font-size: 0.8rem;
+  color: #9a3412;
+  margin-top: 10px;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.sandhangan-card:hover .sandhangan-click-hint {
+  opacity: 1;
+  color: #c2410c;
+}
+
+.sandhangan-modal-box {
+  width: auto !important;
+  min-width: 200px;
+  padding: 10px 28px;
+}
+
+.sandhangan-symbol-accent {
+  color: #c2410c !important;
 }
 
 .sandhangan-char {
@@ -389,4 +546,1162 @@
     font-size: 1.1rem;
   }
 }
+
+/* Modal Popup Aksara Detail (Diperbesar + Penjelasan & Audio) */
+.aksara-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 8, 4, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalPopUp {
+  from { 
+    opacity: 0; 
+    transform: scale(0.85) translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
+}
+
+.aksara-modal-card {
+  background: linear-gradient(145deg, #fffdfa 0%, #fef3c7 100%);
+  border: 5px solid #8c5324;
+  border-radius: 32px;
+  width: 92%;
+  max-width: 620px;
+  padding: 38px 42px;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(245, 158, 11, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: modalPopUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-sizing: border-box;
+}
+
+.aksara-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: #fef08a;
+  border: 2px solid #b45309;
+  color: #78350f;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.aksara-modal-close:hover {
+  background: #dc2626;
+  color: #fff;
+  border-color: #991b1b;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.aksara-modal-header {
+  margin-bottom: 16px;
+}
+
+.aksara-modal-badge {
+  display: inline-block;
+  background: #fde68a;
+  color: #78350f;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1.5px solid #d97706;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.aksara-modal-header h2 {
+  font-size: 2.6rem;
+  color: #78350f;
+  margin: 0;
+  font-weight: 900;
+}
+
+/* Kotak Simbol Diperbesar */
+.aksara-modal-symbol-box {
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 28px;
+  border: 4px dashed #d97706;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0 24px 0;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.08), 0 10px 25px rgba(217, 119, 6, 0.2);
+}
+
+.aksara-modal-symbol {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 8.5rem;
+  color: #78350f;
+  line-height: 1;
+  text-shadow: 3px 3px 0 rgba(180, 83, 9, 0.2);
+}
+
+/* Box Rincian Penjelasan */
+.aksara-modal-details {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #fde68a;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #78350f;
+}
+
+.detail-value {
+  font-size: 1.25rem;
+  color: #292524;
+  line-height: 1.5;
+  padding-left: 4px;
+}
+
+.detail-value.highlight {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #b45309;
+}
+
+/* Tombol Selesai */
+.btn-modal-done {
+  width: 100%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: 2px solid #065f46;
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: 16px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-modal-done:hover {
+  background: linear-gradient(135deg, #34d399, #047857);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.45);
+}
+
+/* ==========================================================================
+   STYLING TAB BARU: UKARA JANGKEP, STUDIO AKSARA, LAN KUIS KETIK
+   ========================================================================== */
+
+/* TAB 4: UKARA JANGKEP (KALIMAT PANJANG) */
+.ukara-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ukara-card {
+  background: #ffffff;
+  border: 2px solid #fed7aa;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.ukara-card:hover {
+  border-color: #d97706;
+  box-shadow: 0 12px 28px rgba(217, 119, 6, 0.15);
+  transform: translateY(-3px);
+}
+
+.ukara-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1.5px solid #fef3c7;
+  padding-bottom: 10px;
+}
+
+.ukara-number {
+  background: #78350f;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.ukara-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #78350f;
+  flex: 1;
+}
+
+.ukara-badge {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-gampil {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.badge-sedheng {
+  background: #fef9c3;
+  color: #a16207;
+  border: 1px solid #fde047;
+}
+
+.badge-utama {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.ukara-aksara-display {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  color: #78350f;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 2px dashed #f59e0b;
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin-bottom: 18px;
+  text-align: center;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.ukara-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ukara-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ukara-label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #92400e;
+}
+
+.ukara-latin-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.ukara-meaning-text {
+  font-size: 1.1rem;
+  color: #475569;
+  margin: 0;
+  font-style: italic;
+}
+
+.ukara-bedhahan-box {
+  background: #f8fafc;
+  border-left: 4px solid #f59e0b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.ukara-bedhahan-text {
+  font-size: 1rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   STYLING TAB CERITA: ASAL-USUL AJI SAKA LAN HANACARAKA
+   ========================================================================== */
+.cerita-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.cerita-hanacaraka-highlight {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 3px solid #8c5324;
+  border-radius: 24px;
+  padding: 26px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.highlight-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #78350f;
+  margin: 0 0 18px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.highlight-card {
+  background: #ffffff;
+  border: 2px solid #fed7aa;
+  border-radius: 18px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: #d97706;
+  box-shadow: 0 8px 18px rgba(217, 119, 6, 0.2);
+}
+
+.aksara-badge-row {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 1.8rem;
+  color: #b45309;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.highlight-card h5 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #78350f;
+  margin: 4px 0;
+}
+
+.highlight-makna {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #047857;
+  margin: 0 0 6px 0;
+}
+
+.highlight-sub {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.cerita-chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cerita-chapter-card {
+  background: #ffffff;
+  border: 2px solid #fde68a;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.cerita-chapter-card:hover {
+  border-color: #d97706;
+  box-shadow: 0 8px 22px rgba(217, 119, 6, 0.12);
+}
+
+.chapter-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #fef3c7;
+  padding-bottom: 10px;
+}
+
+.chapter-badge {
+  background: #78350f;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.chapter-header h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #78350f;
+  margin: 0;
+}
+
+.chapter-body p {
+  font-size: 1.1rem;
+  color: #334155;
+  line-height: 1.65;
+  margin: 0 0 12px 0;
+}
+
+.chapter-body p:last-child {
+  margin-bottom: 0;
+}
+
+.cerita-quote {
+  background: #fffbeb;
+  border-left: 5px solid #d97706;
+  margin: 12px 0 16px 0;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #78350f;
+  border-radius: 4px 12px 12px 4px;
+}
+
+.cerita-verse-box {
+  background: linear-gradient(135deg, #fffdfa, #fef3c7);
+  border: 2px dashed #d97706;
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin: 14px 0;
+}
+
+.cerita-verse-box p {
+  font-size: 1.25rem !important;
+  color: #78350f !important;
+  margin: 6px 0 !important;
+  font-family: inherit;
+}
+
+.cerita-verse-box strong {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 1.6rem;
+  color: #92400e;
+  margin-right: 8px;
+}
+
+/* ==========================================================================
+   STYLING TAB TEMBANG: CARA GAMPIL NGAPALAKE WUJUD AKSARA
+   ========================================================================== */
+.lagu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.lagu-lyrics-banner {
+  background: linear-gradient(135deg, #78350f, #92400e);
+  border: 3px solid #f59e0b;
+  border-radius: 24px;
+  padding: 28px 32px;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lagu-badge-note {
+  display: inline-block;
+  background: #fef3c7;
+  color: #78350f;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.lagu-lyrics-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lagu-lyrics-lines p {
+  font-size: 1.35rem;
+  margin: 0;
+  font-weight: 600;
+  color: #fef3c7;
+  letter-spacing: 0.4px;
+}
+
+.lagu-lyrics-lines strong {
+  color: #ffffff;
+  font-size: 1.45rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.lagu-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lagu-feature-card {
+  background: #ffffff;
+  border: 2px solid #fed7aa;
+  border-radius: 20px;
+  padding: 22px 26px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.lagu-feature-card:hover {
+  border-color: #d97706;
+  box-shadow: 0 10px 24px rgba(217, 119, 6, 0.15);
+  transform: translateY(-2px);
+}
+
+.lagu-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #fef3c7;
+  padding-bottom: 10px;
+}
+
+.lagu-chip {
+  background: #fde68a;
+  color: #78350f;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.lagu-card-header h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #78350f;
+  margin: 0;
+}
+
+.lagu-comparison-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 14px 0;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1.5px dashed #f59e0b;
+  align-items: center;
+  justify-content: center;
+}
+
+.lagu-char-pair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 8px 18px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.lagu-char-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: #ffffff;
+  padding: 8px 18px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 60px;
+}
+
+.lagu-jawa {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 3rem;
+  color: #78350f;
+  line-height: 1.1;
+}
+
+.lagu-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #b45309;
+}
+
+.lagu-vs {
+  font-size: 1.2rem;
+  color: #92400e;
+  font-weight: 800;
+  margin: 0 4px;
+}
+
+.lagu-desc {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.55;
+  margin: 10px 0 0 0;
+}
+
+
+/* TAB 5: STUDIO PEMBUAT AKSARA */
+.studio-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.studio-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.studio-input-label {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #78350f;
+}
+
+.studio-textarea {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 600;
+  border: 3px solid #f59e0b;
+  border-radius: 16px;
+  outline: none;
+  background: #ffffff;
+  color: #1e293b;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.studio-textarea:focus {
+  border-color: #b45309;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.25);
+}
+
+.studio-quick-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #78350f;
+  margin-top: 4px;
+}
+
+.studio-quick-chips button {
+  background: #fef3c7;
+  border: 1px solid #d97706;
+  color: #78350f;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.studio-quick-chips button:hover {
+  background: #f59e0b;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.studio-output-section {
+  background: #ffffff;
+  border: 3px solid #8c5324;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.studio-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.studio-output-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #78350f;
+}
+
+.btn-studio-copy {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-studio-copy:hover:not(:disabled) {
+  background: linear-gradient(135deg, #fbbf24, #b45309);
+  transform: scale(1.04);
+}
+
+.studio-result-display {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.4;
+  color: #78350f;
+  background: #fffbeb;
+  border: 2px dashed #f59e0b;
+  border-radius: 16px;
+  padding: 28px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-break: break-word;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.studio-result-display .placeholder-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.studio-tips-box {
+  margin-top: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.studio-tips-box ul {
+  margin: 8px 0 0 20px;
+  padding: 0;
+}
+
+.studio-tips-box li {
+  margin-bottom: 4px;
+}
+
+.studio-tips-box code {
+  background: #fef3c7;
+  color: #b45309;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* TAB 6: KUIS KETIK AKSARA JAWA */
+.kuis-level-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.btn-level-pill {
+  background: #ffffff;
+  border: 2px solid #fed7aa;
+  color: #78350f;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.btn-level-pill:hover {
+  border-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(245, 158, 11, 0.2);
+}
+
+.btn-level-pill.active {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  border-color: #b45309;
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.35);
+  transform: scale(1.03);
+}
+
+.kuis-card-box {
+  background: #ffffff;
+  border: 3px solid #8c5324;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kuis-score-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #fed7aa;
+  padding-bottom: 14px;
+}
+
+.kuis-progress-badge {
+  background: #fef3c7;
+  color: #78350f;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid #d97706;
+}
+
+.kuis-score-badge {
+  background: #10b981;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 6px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.kuis-display-soal {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 3px dashed #d97706;
+  border-radius: 20px;
+  padding: 28px 20px 22px 20px;
+  text-align: center;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kuis-aksara-jawa {
+  font-family: 'Noto Sans Javanese', 'Javanese Text', 'Tuladha Jejeg', sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.3;
+  color: #78350f;
+  margin-bottom: 14px;
+  text-shadow: 2px 2px 0 rgba(180, 83, 9, 0.15);
+}
+
+.kuis-help-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-help-chip {
+  background: #ffffff;
+  border: 1.5px solid #d97706;
+  color: #78350f;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: inherit;
+}
+
+.btn-help-chip:hover {
+  background: #fef3c7;
+  transform: translateY(-2px);
+  border-color: #b45309;
+}
+
+.btn-help-chip.active {
+  background: #f59e0b;
+  color: #ffffff;
+  border-color: #b45309;
+}
+
+.kuis-hint-bubble {
+  background: #ffffff;
+  border-left: 4px solid #f59e0b;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 14px;
+  color: #78350f;
+  font-size: 1.05rem;
+  text-align: left;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  animation: modalPopUp 0.2s ease;
+}
+
+.kuis-answer-bubble {
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #065f46;
+  font-size: 1.05rem;
+  text-align: left;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  animation: modalPopUp 0.2s ease;
+}
+
+.kuis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kuis-label {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #78350f;
+}
+
+.kuis-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.kuis-input {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 700;
+  border: 3px solid #f59e0b;
+  border-radius: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+  color: #1e293b;
+}
+
+.kuis-input:focus {
+  border-color: #b45309;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.25);
+}
+
+.kuis-input.bener {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.kuis-input.salah {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.btn-kuis-submit {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 16px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-kuis-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #fbbf24, #b45309);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(180, 83, 9, 0.4);
+}
+
+.btn-kuis-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.kuis-feedback-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  animation: modalPopUp 0.3s ease;
+}
+
+.feedback-bener {
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+}
+
+.feedback-salah {
+  background: #fef2f2;
+  border: 2px solid #fca5a5;
+}
+
+.feedback-icon {
+  font-size: 2.2rem;
+}
+
+.feedback-text {
+  flex: 1;
+}
+
+.feedback-text h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.25rem;
+  color: #166534;
+}
+
+.feedback-salah .feedback-text h4 {
+  color: #991b1b;
+}
+
+.feedback-text p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #1f2937;
+}
+
+.feedback-meaning {
+  font-style: italic;
+  color: #4b5563 !important;
+}
+
+.btn-kuis-lanjut {
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-kuis-lanjut:hover {
+  background: #059669;
+  transform: scale(1.04);
+}
+
+.btn-kuis-intip {
+  background: #fee2e2;
+  border: 1.5px solid #ef4444;
+  color: #b91c1c;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-kuis-intip:hover {
+  background: #fecaca;
+}
+
+.kuis-kunci-bocoran {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #78350f;
+  font-size: 1.1rem;
+}
+
+.kuis-nav-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-kuis-skip {
+  background: transparent;
+  border: none;
+  color: #78350f;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-kuis-skip:hover {
+  background: #fef3c7;
+  text-decoration: underline;
+}
+
+
 

@@ -84,6 +84,33 @@ export const playPopSound = () => {
   }
 };
 
+// Suara Pengucapan / TTS Pelafalan Aksara Jawa (Web Speech API)
+export const speakAksara = (text: string) => {
+  try {
+    const sfxOn = localStorage.getItem('sfxOn') !== 'false';
+    if (!sfxOn) return;
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel(); // Hentikan suara yang sedang berbunyi
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'id-ID'; // Menggunakan aksen bahasa Indonesia yang cocok dengan fonetik Jawa
+      utterance.rate = 0.85; // Sedikit lebih lambat agar jelas untuk anak SD/MI
+      utterance.pitch = 1.05;
+
+      // Cari suara bahasa Indonesia jika tersedia di browser
+      const voices = window.speechSynthesis.getVoices();
+      const idVoice = voices.find(v => v.lang.includes('id') || v.lang.includes('ID'));
+      if (idVoice) {
+        utterance.voice = idVoice;
+      }
+
+      window.speechSynthesis.speak(utterance);
+    }
+  } catch (e) {
+    console.error("Gagal melafalkan suara:", e);
+  }
+};
+
 // Sintesis Suara Angin (Dihapus karena user akan menggunakan file MP3)
 
 // Suara salah (Buzzer / Tetot)

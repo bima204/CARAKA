@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { playGamelanClick } from '../utils/sfx';
 import './Home.css';
 
 // Predefined particles agar render stabil dan 100% pure
@@ -20,6 +22,31 @@ export default function Home() {
   const location = useLocation();
   const fromOpening = location.state?.fromOpening;
   const particles = HOME_PARTICLES;
+
+  const [showExitModal, setShowExitModal] = useState(false);
+
+  const handleOpenExitModal = () => {
+    playGamelanClick();
+    setShowExitModal(true);
+  };
+
+  const handleCancelExit = () => {
+    playGamelanClick();
+    setShowExitModal(false);
+  };
+
+  const handleConfirmExit = () => {
+    playGamelanClick();
+    setShowExitModal(false);
+    // Coba tutup tab jika memungkinkan, jika tidak arahkan kembali ke Halaman Awal (Splash/Opening)
+    try {
+      window.close();
+    } catch {
+      // Browser memblokir window.close jika bukan dibuka via script
+    }
+    // Fallback: Kembali ke opening screen / halaman awal
+    navigate('/');
+  };
 
   return (
     <div className="home-container">
@@ -82,7 +109,31 @@ export default function Home() {
         <button className="btn-menu btn-kecil" onClick={() => navigate('/pengaturan')}>
           <div className="btn-title">Pengaturan</div>
         </button>
+        <button className="btn-menu btn-kecil btn-keluar" onClick={handleOpenExitModal}>
+          <div className="btn-title">Metu (Keluar)</div>
+        </button>
       </div>
+
+      {/* Modal Konfirmasi Keluar Game */}
+      {showExitModal && (
+        <div className="exit-modal-overlay" onClick={handleCancelExit}>
+          <div className="exit-modal-card" onClick={e => e.stopPropagation()}>
+            <div className="exit-modal-icon">🚪</div>
+            <h3 className="exit-modal-title">Metu Saka Game?</h3>
+            <p className="exit-modal-desc">
+              Apa kowe yakin arep metu saka dolanan CARAKA lan mbalik menyang layar wiwitan?
+            </p>
+            <div className="exit-modal-actions">
+              <button className="btn-exit-cancel" onClick={handleCancelExit}>
+                Batal
+              </button>
+              <button className="btn-exit-confirm" onClick={handleConfirmExit}>
+                Iya, Metu
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

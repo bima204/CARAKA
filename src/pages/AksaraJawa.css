@@ -882,6 +882,60 @@
   gap: 28px;
 }
 
+.cerita-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cerita-lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fef3c7;
+  padding: 8px 14px;
+  border-radius: 16px;
+  border: 2px solid #f59e0b;
+}
+
+.lang-label {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #78350f;
+}
+
+.lang-btn-group {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-lang-choice {
+  background: #ffffff;
+  border: 1.5px solid #d97706;
+  color: #78350f;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-lang-choice:hover {
+  background: #fde68a;
+  transform: translateY(-1px);
+}
+
+.btn-lang-choice.active {
+  background: linear-gradient(135deg, #b45309, #78350f);
+  color: #ffffff;
+  border-color: #78350f;
+  box-shadow: 0 4px 10px rgba(120, 53, 15, 0.3);
+}
+
 .cerita-hanacaraka-highlight {
   background: linear-gradient(135deg, #fffbeb, #fef3c7);
   border: 3px solid #8c5324;

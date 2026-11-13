@@ -58,6 +58,9 @@ export default function AksaraJawa() {
   const [selectedPasangan, setSelectedPasangan] = useState<PasanganItem | null>(null);
   const [selectedSandhangan, setSelectedSandhangan] = useState<SandhanganItem | null>(null);
 
+  // State untuk Tab Cerita Aji Saka
+  const [ceritaLang, setCeritaLang] = useState<'id' | 'jv'>('id');
+
   // State untuk Tab Studio Pembuat Aksara
   const [studioInput, setStudioInput] = useState('bapak pucung');
   const [copyFeedback, setCopyFeedback] = useState(false);
@@ -996,37 +999,84 @@ export default function AksaraJawa() {
         {activeTab === 'cerita' && (
           <div className="cerita-container">
             <div className="aksara-section-info">
-              <h3>📖 Asal-usul Aksara Jawa: Dumadine Carakan Aji Saka</h3>
-              <p>Carita kepahlawanan Aji Saka ing Medang Kamulan lan kasetyane Dora lan Sembada kang nglairake 20 aksara Hanacaraka.</p>
+              <div className="cerita-header-row">
+                <div>
+                  <h3>📖 {ceritaLang === 'id' ? 'Asal-usul Aksara Jawa: Kisah Aji Saka' : 'Asal-usul Aksara Jawa: Dumadine Carakan Aji Saka'}</h3>
+                  <p>
+                    {ceritaLang === 'id' 
+                      ? 'Kisah kepahlawanan Aji Saka di Medang Kamulan dan kesetiaan mutlak Dora & Sembada yang melahirkan 20 huruf Hanacaraka.' 
+                      : 'Carita kepahlawanan Aji Saka ing Medang Kamulan lan kasetyane Dora lan Sembada kang nglairake 20 aksara Hanacaraka.'}
+                  </p>
+                </div>
+
+                {/* Tombol Pengubah Bahasa (Bahasa Indonesia / Basa Jawa) */}
+                <div className="cerita-lang-toggle">
+                  <span className="lang-label">Pilih Basa:</span>
+                  <div className="lang-btn-group">
+                    <button 
+                      className={`btn-lang-choice ${ceritaLang === 'id' ? 'active' : ''}`}
+                      onClick={() => { playGamelanClick(); setCeritaLang('id'); }}
+                      type="button"
+                    >
+                      🇮🇩 Indonesia
+                    </button>
+                    <button 
+                      className={`btn-lang-choice ${ceritaLang === 'jv' ? 'active' : ''}`}
+                      onClick={() => { playGamelanClick(); setCeritaLang('jv'); }}
+                      type="button"
+                    >
+                      👑 Jawa
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Sorotan 4 Larikan Filosofi Cerita */}
             <div className="cerita-hanacaraka-highlight">
-              <h4 className="highlight-title">✨ Sajak Kasetyan Dora & Sembada (4 Gatra Hanacaraka)</h4>
+              <h4 className="highlight-title">
+                {ceritaLang === 'id' ? '✨ Syair Kesetiaan Dora & Sembada (4 Baris Hanacaraka)' : '✨ Sajak Kasetyan Dora & Sembada (4 Gatra Hanacaraka)'}
+              </h4>
               <div className="highlight-grid">
                 <div className="highlight-card">
                   <span className="aksara-badge-row">ꦲ ꦤ ꦕ ꦫ ꦏ</span>
                   <h5>Ha Na Ca Ra Ka</h5>
-                  <p className="highlight-makna">"Hana caraka" (Ana utusan / utusan urip)</p>
-                  <span className="highlight-sub">Aji Saka ngutus Sembada njupuk pusaka marang Dora ing Pulo Majeti.</span>
+                  <p className="highlight-makna">{ceritaLang === 'id' ? '"Hana caraka" (Ada utusan)' : '"Hana caraka" (Ana utusan / utusan urip)'}</p>
+                  <span className="highlight-sub">
+                    {ceritaLang === 'id' 
+                      ? 'Aji Saka mengutus Sembada menjemput keris pusaka dari Dora di Pulau Majeti.' 
+                      : 'Aji Saka ngutus Sembada njupuk pusaka marang Dora ing Pulo Majeti.'}
+                  </span>
                 </div>
                 <div className="highlight-card">
                   <span className="aksara-badge-row">ꦢ ꦠ ꦱ ꦮ ꦭ</span>
                   <h5>Da Ta Sa Wa La</h5>
-                  <p className="highlight-makna">"Data sawala" (Padha padu / pasulayan)</p>
-                  <span className="highlight-sub">Kekalihe padha rebut bener amarga ngugemi amanat sarta janji suci marang Aji Saka.</span>
+                  <p className="highlight-makna">{ceritaLang === 'id' ? '"Data sawala" (Saling berselisih pendapat)' : '"Data sawala" (Padha padu / pasulayan)'}</p>
+                  <span className="highlight-sub">
+                    {ceritaLang === 'id' 
+                      ? 'Keduanya berselisih karena sama-sama memegang teguh amanat dan sumpah suci kepada Aji Saka.' 
+                      : 'Kekalihe padha rebut bener amarga ngugemi amanat sarta janji suci marang Aji Saka.'}
+                  </span>
                 </div>
                 <div className="highlight-card">
                   <span className="aksara-badge-row">ꦥ ꦝ ꦗ ꦪ ꦚ</span>
                   <h5>Pa Dha Ja Ya Nya</h5>
-                  <p className="highlight-makna">"Padha jayanya" (Padha sektine lan kakuwatane)</p>
-                  <span className="highlight-sub">Dora lan Sembada tandhing jurit, kridhane padha pinter lan sektine tanpa tandhing.</span>
+                  <p className="highlight-makna">{ceritaLang === 'id' ? '"Padha jayanya" (Sama-sama sakti)' : '"Padha jayanya" (Padha sektine lan kakuwatane)'}</p>
+                  <span className="highlight-sub">
+                    {ceritaLang === 'id' 
+                      ? 'Dora dan Sembada bertarung sengit dengan kesaktian dan kepandaian yang seimbang.' 
+                      : 'Dora lan Sembada tandhing jurit, kridhane padha pinter lan sektine tanpa tandhing.'}
+                  </span>
                 </div>
                 <div className="highlight-card">
                   <span className="aksara-badge-row">ꦩ ꦒ ꦧ ꦛ ꦔ</span>
                   <h5>Ma Ga Ba Tha Nga</h5>
-                  <p className="highlight-makna">"Maga bathanga" (Padha dadi bathang / nemahi pralaya)</p>
-                  <span className="highlight-sub">Kekalihe nemahi pralaya bebarengan minangka bukti kasetyan mutlak marang bendarane.</span>
+                  <p className="highlight-makna">{ceritaLang === 'id' ? '"Maga bathanga" (Sama-sama menjadi mayat)' : '"Maga bathanga" (Padha dadi bathang / nemahi pralaya)'}</p>
+                  <span className="highlight-sub">
+                    {ceritaLang === 'id' 
+                      ? 'Keduanya gugur bersama di medan laga demi membuktikan kesetiaan mutlak mereka.' 
+                      : 'Kekalihe nemahi pralaya bebarengan minangka bukti kasetyan mutlak marang bendarane.'}
+                  </span>
                 </div>
               </div>
             </div>
@@ -1037,21 +1087,42 @@ export default function AksaraJawa() {
               <div className="cerita-chapter-card">
                 <div className="chapter-header">
                   <span className="chapter-badge">Babak 1</span>
-                  <h4>⛵ Pengembaraan Aji Saka menyang Tanah Jawa</h4>
+                  <h4>
+                    {ceritaLang === 'id' ? '⛵ Pengembaraan Aji Saka ke Tanah Jawa' : '⛵ Pengembaraan Aji Saka menyang Tanah Jawa'}
+                  </h4>
                 </div>
                 <div className="chapter-body">
-                  <p>
-                    Ing jaman biyen, ana satriya mudha kang linuwih asmane <strong>Aji Saka</strong> saka tanah Hindustan lelana menyang pulo Jawa. Aji Saka ora ijen, nanging kadherekake dening abdine loro kang setya tuhu, yaiku <strong>Dora</strong> lan <strong>Sembada</strong>. Kekalihe lelayaran tumuju negara kang subur makmur aran <strong>Medang Kamulan</strong>.
-                  </p>
-                  <p>
-                    Sadurunge tekan Medang Kamulan, rombongan leren dhisik ing <strong>Pulo Majeti</strong>. Ing pulo iki, Aji Saka masrahake pusaka awujud keris marang <strong>Dora</strong> supaya dijaga kanthi becik. Aji Saka paring weling kenceng:
-                  </p>
-                  <blockquote className="cerita-quote">
-                    "Dora, reksanen keris pusakaku iki. Aja pisan-pisan kokwenehake sapa wae, kajaba aku dhewe sing teka njupuk!"
-                  </blockquote>
-                  <p>
-                    Dora saguh lan nampa dhawuh kasebut, dene Aji Saka lan Sembada nerusake lakune menyang Medang Kamulan.
-                  </p>
+                  {ceritaLang === 'id' ? (
+                    <>
+                      <p>
+                        Pada zaman dahulu, seorang pemuda cakap bernama <strong>Aji Saka</strong> dari Hindustan pergi berkelana ke tanah Jawa. Ia tidak sendirian, melainkan didampingi oleh dua sahabat setianya yang menjadi pengikutnya, yaitu <strong>Dora</strong> dan <strong>Sembada</strong>. Ketiganya berlayar menuju sebuah negeri yang subur makmur bernama <strong>Medang Kamulan</strong>.
+                      </p>
+                      <p>
+                        Di dalam perjalanan, ketiganya berhenti sejenak dan beristirahat di sebuah pulau bernama <strong>Pulau Majeti</strong>. Di pulau ini, karena tidak berniat membawa keris pusakanya ke Medang Kamulan, Aji Saka menitahkan amanat kepada <strong>Dora</strong> untuk menjaga pusaka tersebut:
+                      </p>
+                      <blockquote className="cerita-quote">
+                        "Dora, jagalah keris pusakaku ini baik-baik. Jangan pernah kau serahkan kepada siapa pun, kecuali aku sendiri yang datang mengambilnya!"
+                      </blockquote>
+                      <p>
+                        Dora menerima mandat tersebut dengan setia dan tetap tinggal di Pulau Majeti, sementara Aji Saka dan Sembada melanjutkan pengembaraannya menuju Medang Kamulan.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Ing jaman biyen, ana satriya mudha kang linuwih asmane <strong>Aji Saka</strong> saka tanah Hindustan lelana menyang pulo Jawa. Aji Saka ora ijen, nanging kadherekake dening abdine loro kang setya tuhu, yaiku <strong>Dora</strong> lan <strong>Sembada</strong>. Kekalihe lelayaran tumuju negara kang subur makmur aran <strong>Medang Kamulan</strong>.
+                      </p>
+                      <p>
+                        Sadurunge tekan Medang Kamulan, rombongan leren dhisik ing <strong>Pulo Majeti</strong>. Ing pulo iki, Aji Saka masrahake pusaka awujud keris marang <strong>Dora</strong> supaya dijaga kanthi becik. Aji Saka paring weling kenceng:
+                      </p>
+                      <blockquote className="cerita-quote">
+                        "Dora, reksanen keris pusakaku iki. Aja pisan-pisan kokwenehake sapa wae, kajaba aku dhewe sing teka njupuk!"
+                      </blockquote>
+                      <p>
+                        Dora saguh lan nampa dhawuh kasebut, dene Aji Saka lan Sembada nerusake lakune menyang Medang Kamulan.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -1059,18 +1130,36 @@ export default function AksaraJawa() {
               <div className="cerita-chapter-card">
                 <div className="chapter-header">
                   <span className="chapter-badge">Babak 2</span>
-                  <h4>👹 Angkara Murka Prabu Dewata Cengkar</h4>
+                  <h4>
+                    {ceritaLang === 'id' ? '👹 Kekejaman Prabu Dewata Cengkar' : '👹 Angkara Murka Prabu Dewata Cengkar'}
+                  </h4>
                 </div>
                 <div className="chapter-body">
-                  <p>
-                    Tekan ing Medang Kamulan, Aji Saka lan Sembada manggon ana ing daleme randha tuwa arane <strong>Nyai Sengkeran</strong>. Aji Saka misuwur amarga kapinterane lan kawicaksanane, mula akeh wong kalebu Ki Patih sing meguru marang panjenengane.
-                  </p>
-                  <p>
-                    Nanging, wargane Medang Kamulan padha nandhang prihatin lan giris. Negarane dipimpin dening ratu kang wengis lan seneng memangsa daging manungsa, yaiku <strong>Prabu Dewata Cengkar</strong>. Saben dina kudu ana warga sing dikurbanake dadi mangsane sang raja.
-                  </p>
-                  <p>
-                    Krungu sambate Ki Patih lan tangise rakyat, Aji Saka krenteg atine kanggo ngilangake angkara murka kasebut.
-                  </p>
+                  {ceritaLang === 'id' ? (
+                    <>
+                      <p>
+                        Setibanya di Medang Kamulan, Aji Saka dan Sembada tinggal di kediaman seorang janda tua bernama <strong>Nyai Sengkeran</strong>. Sejak kedatangannya, berkat kepandaian dan keluhuran budinya, banyak orang termasuk Patih Medang Kamulan datang berbondong-bondong untuk berguru kepada Aji Saka.
+                      </p>
+                      <p>
+                        Namun, suasana di Medang Kamulan diliputi ketakutan mencekam. Negeri itu dipimpin oleh seorang raja yang kejam dan zalim bernama <strong>Prabu Dewata Cengkar</strong>. Sang raja memiliki kegemaran mengerikan: memangsa daging manusia! Setiap hari, seorang rakyat harus dikorbankan untuk menjadi santapan sang raja.
+                      </p>
+                      <p>
+                        Mendengar rintihan sang patih dan derita rakyat jelata, Aji Saka tergerak untuk mengakhiri tirani dan kekejaman raja kanibal tersebut.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Tekan ing Medang Kamulan, Aji Saka lan Sembada manggon ana ing daleme randha tuwa arane <strong>Nyai Sengkeran</strong>. Aji Saka misuwur amarga kapinterane lan kawicaksanane, mula akeh wong kalebu Ki Patih sing meguru marang panjenengane.
+                      </p>
+                      <p>
+                        Nanging, wargane Medang Kamulan padha nandhang prihatin lan giris. Negarane dipimpin dening ratu kang wengis lan seneng memangsa daging manungsa, yaiku <strong>Prabu Dewata Cengkar</strong>. Saben dina kudu ana warga sing dikurbanake dadi mangsane sang raja.
+                      </p>
+                      <p>
+                        Krungu sambate Ki Patih lan tangise rakyat, Aji Saka krenteg atine kanggo ngilangake angkara murka kasebut.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -1078,21 +1167,42 @@ export default function AksaraJawa() {
               <div className="cerita-chapter-card">
                 <div className="chapter-header">
                   <span className="chapter-badge">Babak 3</span>
-                  <h4>👑 Ikete Aji Saka Ngalahake Sang Raja</h4>
+                  <h4>
+                    {ceritaLang === 'id' ? '👑 Sorban Aji Saka Menaklukkan Sang Raja' : '👑 Ikete Aji Saka Ngalahake Sang Raja'}
+                  </h4>
                 </div>
                 <div className="chapter-body">
-                  <p>
-                    Kanthi kendel, Aji Saka seba ing ngarsane Prabu Dewata Cengkar lan masrahake awake dadi kurban panganan sabanjure. Sang Prabu seneng banget. Nanging sadurunge dipangan, Aji Saka nyuwun panyuwunan sepisan:
-                  </p>
-                  <blockquote className="cerita-quote">
-                    "Kula lila dipun-mangsa dening Sang Prabu, nanging kula nyuwun lemah saambane iket udheng (kain sirah) kula menika."
-                  </blockquote>
-                  <p>
-                    Prabu Dewata Cengkar ngguyu lakak-lakak lan nyarujuki amarga nganggep remeh iket kasebut. Nanging ajaib, nalika ikete Aji Saka dibeber, kain iku sansaya dawa lan amba nganti ngebaki kraton!
-                  </p>
-                  <p>
-                    Sang Prabu terus mundur narik pucuke iket nganti tekan pinggir tebing <strong>Segara Kidul</strong>. Kanthi kridhane Aji Saka, iket dikipatake saengga Prabu Dewata Cengkar kecemplung ing segara lan sirna dadi <em>baya putih</em>. Rakyat Medang Kamulan banjur ngangkat Aji Saka dadi ratu anyar kang adil lan wicaksana.
-                  </p>
+                  {ceritaLang === 'id' ? (
+                    <>
+                      <p>
+                        Dengan keberanian luar biasa, Aji Saka menghadap Prabu Dewata Cengkar ke istana dan secara sukarela mengajukan diri untuk menjadi korban santapan berikutnya. Prabu Dewata Cengkar tertawa terbahak-bahak kegirangan. Namun, sebelum disantap, Aji Saka mengajukan satu syarat sederhana:
+                      </p>
+                      <blockquote className="cerita-quote">
+                        "Hamba rela menjadi santapan Baginda Raja, asalkan Baginda memberikan tanah seluas kain ikat kepala (sorban) yang hamba kenakan ini."
+                      </blockquote>
+                      <p>
+                        Menganggap remeh kain kecil itu, Prabu Dewata Cengkar langsung menyetujuinya tanpa ragu. Namun keajaiban terjadi! Ketika ikatan kain itu dibuka dan dibentangkan, sorban Aji Saka terus memanjang dan melebar tanpa batas hingga menutupi seluruh sudut kerajaan.
+                      </p>
+                      <p>
+                        Sang raja yang tamak terus menarik ujung kain sambil berjalan mundur hingga terdesak ke tepi jurang karang di pesisir <strong>Laut Selatan</strong>. Dengan kibasan sakti Aji Saka, Prabu Dewata Cengkar terhempas ke dalam samudra dan sirna menjelma menjadi <em>seekor buaya putih</em>. Rakyat Medang Kamulan bersorak gembira dan mengangkat Aji Saka menjadi raja mereka yang adil dan bijaksana.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Kanthi kendel, Aji Saka seba ing ngarsane Prabu Dewata Cengkar lan masrahake awake dadi kurban panganan sabanjure. Sang Prabu seneng banget. Nanging sadurunge dipangan, Aji Saka nyuwun panyuwunan sepisan:
+                      </p>
+                      <blockquote className="cerita-quote">
+                        "Kula lila dipun-mangsa dening Sang Prabu, nanging kula nyuwun lemah saambane iket udheng (kain sirah) kula menika."
+                      </blockquote>
+                      <p>
+                        Prabu Dewata Cengkar ngguyu lakak-lakak lan nyarujuki amarga nganggep remeh iket kasebut. Nanging ajaib, nalika ikete Aji Saka dibeber, kain iku sansaya dawa lan amba nganti ngebaki kraton!
+                      </p>
+                      <p>
+                        Sang Prabu terus mundur narik pucuke iket nganti tekan pinggir tebing <strong>Segara Kidul</strong>. Kanthi kridhane Aji Saka, iket dikipatake saengga Prabu Dewata Cengkar kecemplung ing segara lan sirna dadi <em>baya putih</em>. Rakyat Medang Kamulan banjur ngangkat Aji Saka dadi ratu anyar kang adil lan wicaksana.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -1100,21 +1210,42 @@ export default function AksaraJawa() {
               <div className="cerita-chapter-card">
                 <div className="chapter-header">
                   <span className="chapter-badge">Babak 4</span>
-                  <h4>⚔️ Pasulayan lan Kasetyane Dora lan Sembada</h4>
+                  <h4>
+                    {ceritaLang === 'id' ? '⚔️ Pertarungan dan Kesetiaan Dora & Sembada' : '⚔️ Pasulayan lan Kasetyane Dora lan Sembada'}
+                  </h4>
                 </div>
                 <div className="chapter-body">
-                  <p>
-                    Sawise tentrem ing Medang Kamulan, Aji Saka kelingan pusakane ing Pulo Majeti. Panjenengane ngutus <strong>Sembada</strong> supaya menyang Pulo Majeti njupuk keris kasebut.
-                  </p>
-                  <p>
-                    Satekane ing Pulo Majeti, Sembada ketemu Dora lan ngandhakake yen Aji Saka wis dadi ratu sarta ngutus dheweke njupuk keris pusaka. Nanging Dora nolak kanthi kukuh:
-                  </p>
-                  <blockquote className="cerita-quote">
-                    "Sembada, aku tresna marang kowe minangka sedulur. Nanging aku wis sumpah marang Gusti Aji Saka, ora bakal masrahake keris iki kajaba panjenengane dhewe sing njupuk!"
-                  </blockquote>
-                  <p>
-                    Sembada uga ngrasa kudu ngrampungake dhawuhe ratu. Kekalihe padha-padha ngugemi amanat, saengga nuwuhake pasulayan (perang tanding) kang rame. Amarga keduwure ilmu lan sektine padha, kekalihe nemahi pralaya (mati bebarengan) ing bantala.
-                  </p>
+                  {ceritaLang === 'id' ? (
+                    <>
+                      <p>
+                        Setelah ketenteraman pulih di Medang Kamulan, Aji Saka teringat akan keris pusakanya yang masih berada di Pulau Majeti. Ia pun mengutus <strong>Sembada</strong> berlayar ke Pulau Majeti untuk mengambil keris tersebut.
+                      </p>
+                      <p>
+                        Setibanya di sana, Sembada melepas rindu dan menceritakan bahwa Aji Saka kini telah menjadi raja Medang Kamulan dan menitahkan agar keris pusaka diserahkan. Namun, Dora menolak mentah-mentah:
+                      </p>
+                      <blockquote className="cerita-quote">
+                        "Sembada temanku, aku menghormatimu. Namun aku telah berjanji setia kepada junjungan kita Aji Saka, bahwa keris pusaka ini tidak boleh diserahkan kepada siapa pun kecuali beliau sendiri yang datang mengambilnya!"
+                      </blockquote>
+                      <p>
+                        Sembada bersikukuh menjalankan perintah rajanya, sementara Dora teguh menjaga amanat awalnya. Karena keduanya sama-sama memegang janji suci dan kehormatan, perselisihan berujung pada pertarungan sengit. Keduanya bertarung dengan ilmu kesaktian yang setara hingga akhirnya gugur bersama di medan laga.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Sawise tentrem ing Medang Kamulan, Aji Saka kelingan pusakane ing Pulo Majeti. Panjenengane ngutus <strong>Sembada</strong> supaya menyang Pulo Majeti njupuk keris kasebut.
+                      </p>
+                      <p>
+                        Satekane ing Pulo Majeti, Sembada ketemu Dora lan ngandhakake yen Aji Saka wis dadi ratu sarta ngutus dheweke njupuk keris pusaka. Nanging Dora nolak kanthi kukuh:
+                      </p>
+                      <blockquote className="cerita-quote">
+                        "Sembada, aku tresna marang kowe minangka sedulur. Nanging aku wis sumpah marang Gusti Aji Saka, ora bakal masrahake keris iki kajaba panjenengane dhewe sing njupuk!"
+                      </blockquote>
+                      <p>
+                        Sembada uga ngrasa kudu ngrampungake dhawuhe ratu. Kekalihe padha-padha ngugemi amanat, saengga nuwuhake pasulayan (perang tanding) kang rame. Amarga keduwure ilmu lan sektine padha, kekalihe nemahi pralaya (mati bebarengan) ing bantala.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -1122,21 +1253,42 @@ export default function AksaraJawa() {
               <div className="cerita-chapter-card">
                 <div className="chapter-header">
                   <span className="chapter-badge">Babak 5</span>
-                  <h4>📜 Miyose Aksara Hanacaraka</h4>
+                  <h4>
+                    {ceritaLang === 'id' ? '📜 Lahirnya 20 Aksara Hanacaraka' : '📜 Miyose Aksara Hanacaraka'}
+                  </h4>
                 </div>
                 <div className="chapter-body">
-                  <p>
-                    Aji Saka sing nyusul menyang Pulo Majeti banget getun lan nggetuni kahanan iku. Kanggo mengeti kasetyan lan luhure bebudene abdine loro kasebut, Aji Saka nganggit rerangken 20 aksara Jawa:
-                  </p>
-                  <div className="cerita-verse-box">
-                    <p><strong>ꦲ ꦤ ꦕ ꦫ ꦏ</strong> (Ha Na Ca Ra Ka) = <em>Ana utusan</em></p>
-                    <p><strong>ꦢ ꦠ ꦱ ꦮ ꦭ</strong> (Da Ta Sa Wa La) = <em>Padha pasulayan / rebut bener</em></p>
-                    <p><strong>ꦥ ꦝ ꦗ ꦪ ꦚ</strong> (Pa Dha Ja Ya Nya) = <em>Padha sektine lan kekuwatane</em></p>
-                    <p><strong>ꦩ ꦒ ꦧ ꦛ ꦔ</strong> (Ma Ga Ba Tha Nga) = <em>Padha nemahi pati / dadi bathang</em></p>
-                  </div>
-                  <p>
-                    Kisah menika kaserat ing serat kina yaiku <strong>Serat Manik Moyo</strong> anggitane Karta Mursadah (1852). Wiwit wektu iku, aksara Jawa digunakake kanggo ngrekam kawruh, sejarah, lan kabudayan luhur ing saindenging Nusantara.
-                  </p>
+                  {ceritaLang === 'id' ? (
+                    <>
+                      <p>
+                        Aji Saka yang menyusul ke Pulau Majeti mendapati kedua sahabatnya telah tewas bersama. Diliputi rasa duka, penyesalan mendalam, dan kekaguman atas kesetiaan tanpa batas kedua abdinya, Aji Saka merangkai sajak 20 aksara Jawa sebagai penghormatan abadi:
+                      </p>
+                      <div className="cerita-verse-box">
+                        <p><strong>ꦲ ꦤ ꦕ ꦫ ꦏ</strong> (Ha Na Ca Ra Ka) = <em>Ada dua utusan yang setia</em></p>
+                        <p><strong>ꦢ ꦠ ꦱ ꦮ ꦭ</strong> (Da Ta Sa Wa La) = <em>Terjadi perselisihan karena saling berpegang pada perintah</em></p>
+                        <p><strong>ꦥ ꦝ ꦗ ꦪ ꦚ</strong> (Pa Dha Ja Ya Nya) = <em>Keduanya sama-sama memiliki kesaktian yang hebat</em></p>
+                        <p><strong>ꦩ ꦒ ꦧ ꦛ ꦔ</strong> (Ma Ga Ba Tha Nga) = <em>Keduanya gugur bersama menjadi mayat demi kehormatan janji</em></p>
+                      </div>
+                      <p>
+                        Kisah legendaris ini tercantum dalam dokumen sastra kuno, di antaranya <strong>Serat Manik Moyo</strong> karangan Karta Mursadah (1852). Sejak saat itu, deretan 20 aksara Jawa menjadi aksara resmi untuk mencatat pengetahuan, sejarah, budi pekerti, dan peradaban luhur di Nusantara.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Aji Saka sing nyusul menyang Pulo Majeti banget getun lan nggetuni kahanan iku. Kanggo mengeti kasetyan lan luhure bebudene abdine loro kasebut, Aji Saka nganggit rerangken 20 aksara Jawa:
+                      </p>
+                      <div className="cerita-verse-box">
+                        <p><strong>ꦲ ꦤ ꦕ ꦫ ꦏ</strong> (Ha Na Ca Ra Ka) = <em>Ana utusan</em></p>
+                        <p><strong>ꦢ ꦠ ꦱ ꦮ ꦭ</strong> (Da Ta Sa Wa La) = <em>Padha pasulayan / rebut bener</em></p>
+                        <p><strong>ꦥ ꦝ ꦗ ꦪ ꦚ</strong> (Pa Dha Ja Ya Nya) = <em>Padha sektine lan kekuwatane</em></p>
+                        <p><strong>ꦩ ꦒ ꦧ ꦛ ꦔ</strong> (Ma Ga Ba Tha Nga) = <em>Padha nemahi pati / dadi bathang</em></p>
+                      </div>
+                      <p>
+                        Kisah menika kaserat ing serat kina yaiku <strong>Serat Manik Moyo</strong> anggitane Karta Mursadah (1852). Wiwit wektu iku, aksara Jawa digunakake kanggo ngrekam kawruh, sejarah, lan kabudayan luhur ing saindenging Nusantara.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
